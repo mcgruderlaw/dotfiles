@@ -129,6 +129,10 @@ mkcd () {
   cd "$1"
 }
 
+# git commit
+gitc() {
+  git commit -m "$1"
+}
 
 recent() {
 find $HOME/Dropbox/ -type f -regex ".*\.\(tex\|md\|txt\)" -mtime -$1 -not -path "*dropbox*" -exec vim "{}" +
