@@ -444,8 +444,8 @@ nnoremap <leader>U :GundoToggle<CR>
 nnoremap <leader>a :Ag
 
 " Unmap arrow keys  
-nnoremap <down> ddp
-nnoremap <up> ddkP
+"nnoremap <down> ddp
+"nnoremap <up> ddkP
 
 "Auto-center
 nnoremap G Gzz
