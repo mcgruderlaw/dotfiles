@@ -93,7 +93,7 @@ set thesaurus+=/home/mcgruderlaw/.vim/thesaurus/files/mthesaur.txt
 nnoremap <leader>f :echo expand("%:p")<cr>
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>eb :e $HOME/.bashrc<cr>
+nnoremap <leader>eb :e $HOME/.homesick/repos/dotfiles/home/.bashrc<cr>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
