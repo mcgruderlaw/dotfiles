@@ -65,6 +65,9 @@ set cursorline          " highlight current line
 " set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M:%S\")}
 " set statusline=[%n]\ %<%f\ \ \ [%M%R%H%W%Y]\ \ %=\ %l,%L\ \ \ %c\ \ \ %p%%
 set statusline=\"%f\"\ \ \ %m%r%h%w%y\ \ %=\ %l,%L\ \ \ %c\ \ \ %p%%
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 set showmatch           " highlight matching [{()}]
 set showmatch           " highlight matching [{()}]
 set wildmenu            " visual autocomplete for command menu
