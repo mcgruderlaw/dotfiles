@@ -494,10 +494,10 @@ au VimResized * :wincmd =
 
 " Auto format in insert mode
 
-augroup PROSE
-        autocmd InsertEnter * set formatoptions+=a
-        autocmd InsertLeave * set formatoptions-=a
-augroup END
+" augroup PROSE autocmd InsertEnter * set formatoptions+=a autocmd
+"         autocmd InsertEnter * set formatoptions+=a
+"         autocmd InsertLeave * set formatoptions-=a
+" augroup END
 
 " Reformat
 noremap Q gqap
