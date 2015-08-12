@@ -68,6 +68,7 @@ set statusline=\"%f\"\ \ \ %m%r%h%w%y\ \ %=\ %l,%L\ \ \ %c\ \ \ %p%%
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
+	set statusline+=%{ObsessionStatus()}
 set showmatch           " highlight matching [{()}]
 set showmatch           " highlight matching [{()}]
 set wildmenu            " visual autocomplete for command menu
