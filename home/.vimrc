@@ -118,7 +118,7 @@ nnoremap <leader>TT :TTemplate<CR>
 
 
 
-" Spell checking  --- 
+" Spell checking  ---
 if version >= 700
   hi clear SpellBad
   hi clear SpellCap
@@ -138,7 +138,7 @@ nnoremap <silent> <leader>en :<C-u>EvervimCreateNote<CR>
 nnoremap <silent> <leader>eB :<C-u>EvervimOpenBrowser<CR>
 nnoremap <silent> <leader>ec :<C-u>EvervimOpenClient<CR>
 nnoremap <leader>es :<C-u>EvervimSearchByQuery<SPACE>
-nnoremap <silent> <leader>et :<C-u>EvervimSearchByQuery<SPACE>tag:1-Now,tag:2-Next,tag:3-Soon<CR> 
+nnoremap <silent> <leader>et :<C-u>EvervimSearchByQuery<SPACE>tag:1-Now,tag:2-Next,tag:3-Soon<CR>
 nnoremap <silent> <leader>etl :<C-u>EvervimSearchByQuery<SPACE>tag:4-Later -tag:5-Someday<CR>
 "let g:evervim_splitoption=''
 let g:evervim_usermarkdown='1'
@@ -173,7 +173,7 @@ let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-"let g:airline#extensions#tabline#left_sep = ' ' 
+"let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
 let g:airline#extensions#quickfix#location_text = 'Location'
@@ -182,7 +182,7 @@ let g:airline#extensions#bufferline#overwrite_variables = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "set statusline=%<%f\ %{fugitive#statusline()}\ %h%m%r%=%-14.(%l,%c%V%)\
-"%P 
+"%P
 "set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -225,7 +225,7 @@ set showcmd
 "set splitright
 set wildmode=list:longest,list:full
 " Necessary order
-set linebreak 
+set linebreak
 set textwidth=74
 set display=lastline
 set formatoptions=t1
@@ -286,14 +286,14 @@ endfunction
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
-" this mapping Enter key to <C-y> to chose the current highlight item 
+" this mapping Enter key to <C-y> to chose the current highlight item
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<leader>u' 
+let g:UltiSnipsExpandTrigger='<leader>u'
 "let g:UltiSnipsListSnippets='<c-tab>'
 
 "let g:UltiSnipsJumpForwardTrigger='<c-j>'
@@ -315,10 +315,10 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
 let g:ctrlp_max_files = 0
-let g:ctrlp_max_depth = 150 
+let g:ctrlp_max_depth = 150
 let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_open_new_file = 'r'
- 
+
 set wildignore+=*.so,*.swp,*.zip,*/.hg/*,*/.svn/*,*/.mpd/*,*/mpd/*
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|mpd|offlineimap|spf13-vim-3|adobe)$'
@@ -326,7 +326,7 @@ let g:ctrlp_custom_ignore = '*/Mail/*'
 
 " vimroom configuration
 let g:vimroom_width = 74
- 
+
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
@@ -447,7 +447,7 @@ nnoremap <leader>U :GundoToggle<CR>
 " open ag.vim
 nnoremap <leader>a :Ag
 
-" Unmap arrow keys  
+" Unmap arrow keys
 "nnoremap <down> ddp
 "nnoremap <up> ddkP
 
@@ -457,7 +457,7 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap } }zz
 nnoremap { {zz
-"nmap j jzz 
+"nmap j jzz
 "nmap k kzz
 
 " gO to create a new line below cursor in normal mode
@@ -489,7 +489,7 @@ autocmd BufReadPost *.RTF %!catdoc "%"
 
 au VimResized * :wincmd =
 
-"nnoremap <leader>gq :%!pandoc 
+"nnoremap <leader>gq :%!pandoc
 "vnoremap <leader>gq :!pandoc
 
 " Auto format in insert mode
