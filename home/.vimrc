@@ -45,6 +45,7 @@ Plugin 'gerw/vim-latex-suite'
 Plugin 'gerw/vim-tex-syntax'
 Plugin 'stefandtw/quickfix-reflector.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'noahfrederick/vim-noctu'
 " Plugin 'bling/vim-airline'
 " Plugin 'bling/vim-bufferline'
 " Plugin 'honza/vim-snippets'
@@ -258,7 +259,7 @@ set softtabstop=4   " number of spaces in tab when editing
 "set expandtab       " tabs are spaces
 "set <C-v><Tab>      " for Tab character
 
-colorscheme hipster "skittles_dark elflord badwolf starbucks molokai Tomorrow
+colorscheme hipster "hipster skittles_dark elflord badwolf starbucks molokai Tomorrow
                             "github mayansmoke zenburn relaxedgreen
 
 set background=dark
