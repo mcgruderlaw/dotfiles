@@ -46,6 +46,7 @@ Plugin 'gerw/vim-tex-syntax'
 Plugin 'stefandtw/quickfix-reflector.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'noahfrederick/vim-noctu'
+Plugin 'tpope/vim-vinegar'
 " Plugin 'bling/vim-airline'
 " Plugin 'bling/vim-bufferline'
 " Plugin 'honza/vim-snippets'
@@ -81,7 +82,8 @@ set showcmd
 set pastetoggle=<F2>
 set clipboard=unnamed
 set equalprg=''
-set complete=.,w,b,u,t,i,kspell
+set incsearch
+set complete=.,k,w,b,u,t,i
 set omnifunc=syntaxcomplete#Complete
 
 if &term =~ '256color'
@@ -116,7 +118,6 @@ vnoremap < <gv
 nnoremap <leader>lp :!pdflatex %<cr>
 nnoremap <leader>tt :TTarget<CR>
 nnoremap <leader>TT :TTemplate<CR>
-
 
 
 " Spell checking  ---
