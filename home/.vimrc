@@ -15,7 +15,7 @@ Plugin 'Lokaltog/powerline-fonts'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tyru/open-browser.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'hallison/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'astrumas/evervim'
@@ -240,7 +240,7 @@ set formatoptions=t1
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "Ctl-n opens Nerdtree
-nnoremap <C-n> :NERDTreeToggle<CR><C-w>=:set relativenumber<CR>
+" nnoremap <C-n> :NERDTreeToggle<CR><C-w>=:set relativenumber<CR>
 
 set hidden
 

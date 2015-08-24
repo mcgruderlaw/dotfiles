@@ -10,7 +10,7 @@ endif
 set shortmess=aoO
 badd +206 ~/.homesick/repos/dotfiles/home/.tmux.conf
 badd +492 ~/.homesick/repos/dotfiles/home/.vimrc
-badd +49 ~/Documents/ofc/Cases/PittsEstate/ltr/ltrhd.tex
+badd +43 ~/Documents/ofc/Cases/PittsEstate/ltr/ltrhd.tex
 argglobal
 silent! argdel *
 edit ~/Documents/ofc/Cases/PittsEstate/ltr/ltrhd.tex
@@ -32,11 +32,11 @@ silent! normal! zE
 1,8fold
 1
 normal! zc
-let s:l = 40 - ((20 * winheight(0) + 15) / 30)
+let s:l = 45 - ((35 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-40
+45
 normal! 021|
 tabnext 1
 if exists('s:wipebuf')
