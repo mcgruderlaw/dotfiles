@@ -261,13 +261,13 @@ set softtabstop=4   " number of spaces in tab when editing
 "set expandtab       " tabs are spaces
 "set <C-v><Tab>      " for Tab character
 
-colorscheme hipster "hipster skittles_dark elflord badwolf starbucks molokai Tomorrow
+colorscheme hemisu "hipster skittles_dark elflord badwolf starbucks molokai Tomorrow
                             "github mayansmoke zenburn relaxedgreen
 
 set background=dark
-hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
-hi NonText ctermbg=NONE
-hi Search ctermbg=red
+"hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi NonText ctermbg=NONE
+"hi Search ctermbg=red
 
 nnoremap <F4> :GundoToggle<CR>
 

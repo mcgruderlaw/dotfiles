@@ -3,24 +3,28 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/Documents/ofc/Cases/PittsEstate/ltr
+cd ~/.homesick/repos/dotfiles/home
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 badd +206 ~/.homesick/repos/dotfiles/home/.tmux.conf
-badd +492 ~/.homesick/repos/dotfiles/home/.vimrc
-badd +43 ~/Documents/ofc/Cases/PittsEstate/ltr/ltrhd.tex
+badd +132 ~/.homesick/repos/dotfiles/home/.vimrc
+badd +40 ~/Documents/ofc/Cases/PittsEstate/ltr/ltrhd.tex
+badd +40 ~/.homesick/repos/dotfiles/home/\[Vundle]\ Installer
+badd +13 ~/.Xresources
+badd +0 ~/__EVERVIM_LIST__
+badd +0 ~/__EVERVIM_NOTE__
 argglobal
 silent! argdel *
-edit ~/Documents/ofc/Cases/PittsEstate/ltr/ltrhd.tex
+edit ~/__EVERVIM_NOTE__
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
-setlocal fdm=manual
+setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -28,16 +32,13 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=10
 setlocal fen
-silent! normal! zE
-1,8fold
-1
-normal! zc
-let s:l = 45 - ((35 * winheight(0) + 22) / 45)
+let s:l = 8 - ((7 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-45
-normal! 021|
+8
+normal! 0
+lcd ~/.evervim
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
