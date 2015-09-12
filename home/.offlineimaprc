@@ -42,7 +42,7 @@ maxconnections = 5
 [Repository Work-Remote]
 type = Gmail
 remoteuser = parkermcgruderlaw@gmail.com
-remotepass = WOODWARD200
+remotepass = PRM44060
 realdelete = no
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 maxconnections = 5
