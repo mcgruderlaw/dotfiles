@@ -168,6 +168,11 @@ trS() {
 }
 
 
+ytstream() {
+		mplayer -cookies -cookies-file /tmp/cookie.txt $(youtube-dl -f best -g --cookies /tmp/cookie.txt "$1")
+}
+
+
 yt2mp3() {
 		youtube-dl -c --restrict-filenames --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" $@
 }

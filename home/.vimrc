@@ -47,6 +47,7 @@ Plugin 'stefandtw/quickfix-reflector.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'noahfrederick/vim-noctu'
 Plugin 'noahfrederick/vim-hemisu'
+Plugin 'jonathanfilip/lucius'
 Plugin 'tpope/vim-vinegar'
 " Plugin 'bling/vim-airline'
 " Plugin 'bling/vim-bufferline'
@@ -261,10 +262,14 @@ set softtabstop=4   " number of spaces in tab when editing
 "set expandtab       " tabs are spaces
 "set <C-v><Tab>      " for Tab character
 
-colorscheme hemisu "hipster skittles_dark elflord badwolf starbucks molokai Tomorrow
+set background=dark
+
+colorscheme hemisu
+"LuciusDarkHighContrast
+
+"hemisu noctu hipster lucius skittles_dark elflord badwolf starbucks molokai Tomorrow
                             "github mayansmoke zenburn relaxedgreen
 
-set background=dark
 "hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
 "hi NonText ctermbg=NONE
 "hi Search ctermbg=red

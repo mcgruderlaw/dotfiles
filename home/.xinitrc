@@ -26,7 +26,7 @@ canto-fetch -db
 
 # dropboxd
 
-sh ~/.fehbg &
+# sh ~/.fehbg &
 
 # exec gnome-session
 # exec startkde
