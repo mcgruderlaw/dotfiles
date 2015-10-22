@@ -8,9 +8,9 @@ source ~/.mutt/accounts/personal
 folder-hook Personal/* source ~/.mutt/accounts/personal
 folder-hook Work/*     source ~/.mutt/accounts/work
 folder-hook Firm/*     source ~/.mutt/accounts/firm
-folder-hook 'account.com.yahoo.mcgruderlaw'     'source ~/.mutt/accounts/account.com.yahoo.mcgruderlaw'
+#folder-hook 'account.com.yahoo.mcgruderlaw'     'source ~/.mutt/accounts/account.com.yahoo.mcgruderlaw'
 
-mailboxes =Personal/INBOX =Work/INBOX =Firm/INBOX =Gmail/[Gmail].All\ Mail/ =att
+mailboxes =Personal/INBOX =Work/INBOX =Firm/INBOX =Gmail/[Gmail].All\ Mail/ # =att
 
 set timeout=15
 set mail_check=60
