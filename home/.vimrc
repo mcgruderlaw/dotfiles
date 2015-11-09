@@ -97,10 +97,10 @@ endif
 set spelllang=en_us   " US English spelling
 set dictionary+=/usr/share/dict/cracklib-small "use standard dictionary
 ""set spellfile=$HOME/Sync/vim/spell/en.utf-8.add   " my whitelist
-set thesaurus+=/home/mcgruderlaw/.vim/thesaurus/files/mthesaur.txt
+set thesaurus+=/home/dmc/.vim/thesaurus/files/mthesaur.txt
 
 nnoremap <leader>f :echo expand("%:p")<cr>
-nnoremap <leader>ev :e $HOME/.homesick/repos/dotfiles/home/.vimrc<cr>
+nnoremap <leader>ev :vsp $HOME/.homesick/repos/dotfiles/home/.vimrc<cr>
 nnoremap <leader>sv :source $HOME/.homesick/repos/dotfiles/home/.vimrc<cr>
 nnoremap <leader>eb :e $HOME/.homesick/repos/dotfiles/home/.bashrc<cr>
 nnoremap <c-j> <c-w>j
@@ -264,7 +264,7 @@ set softtabstop=4   " number of spaces in tab when editing
 
 set background=dark
 
-colorscheme hemisu
+colorscheme hipster
 "LuciusDarkHighContrast
 
 "hemisu noctu hipster lucius skittles_dark elflord badwolf starbucks molokai Tomorrow
@@ -626,7 +626,7 @@ function! Capdoc()
 python << endPython
 
 import shutil, vim
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/capdocs4', 'newdoc')
+shutil.copytree('/home/dmc/Documents/ofc/capdocs4', 'newdoc')
 
 
 openfile = open('./Capdoc/casevar.sty', 'r+')
@@ -642,7 +642,7 @@ function! FileSys()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/fileopen/FileSys', 'FileSys')
+shutil.copytree('/home/dmc/Documents/ofc/fileopen/FileSys', 'FileSys')
 
 endPython
 endfunction
@@ -652,7 +652,7 @@ function! Pleading()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/capdocs5/Pleadings', 'newdoc')
+shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Pleadings', 'newdoc')
 
 endPython
 endfunction
@@ -662,7 +662,7 @@ function! Discovery()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/capdocs5/Discovery', 'newdoc')
+shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Discovery', 'newdoc')
 
 endPython
 endfunction
@@ -672,7 +672,7 @@ function! Motion()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/capdocs5/Motions', 'newdoc')
+shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Motions', 'newdoc')
 
 endPython
 endfunction
@@ -682,7 +682,7 @@ function! Letter()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/ltr', 'ltr')
+shutil.copytree('/home/dmc/Documents/ofc/ltr', 'ltr')
 
 endPython
 endfunction
@@ -692,7 +692,7 @@ function! Memo()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/memo', 'memo')
+shutil.copytree('/home/dmc/Documents/ofc/memo', 'memo')
 
 endPython
 endfunction
@@ -702,7 +702,7 @@ function! Note()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/notes', 'note')
+shutil.copytree('/home/dmc/Documents/ofc/notes', 'note')
 
 endPython
 endfunction
@@ -712,7 +712,7 @@ function! Pdfnum()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/pdf', 'pdf')
+shutil.copytree('/home/dmc/Documents/ofc/pdf', 'pdf')
 
 endPython
 endfunction
@@ -722,7 +722,7 @@ function! Printfiles()
 python << endPython
 
 import glob
-print glob.glob("/home/mcgruderlaw/Dropbox/German, Rashard/litfile/8docsrcvd/CDMSP/2007 Biology Procedures Manual/Procedure Manual/Hyperlinks/*.pdf")
+print glob.glob("/home/dmc/Dropbox/German, Rashard/litfile/8docsrcvd/CDMSP/2007 Biology Procedures Manual/Procedure Manual/Hyperlinks/*.pdf")
 
 endPython
 endfunction

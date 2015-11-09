@@ -13,9 +13,9 @@ XTerm*scaleHeight:        1.1
 xterm*termName:             xterm-256color
 !,xterm*termName:             xterm
 !xterm*termName:             terminator
-!xterm*faceName:             Inconsolata:style=Regular:size=12
+xterm*faceName:             Inconsolata:style=Regular:size=10
 !xterm*faceName:             Terminus:style=Regular:size=12
-xterm*faceName:           Terminus:style=Regular:size=10
+!xterm*faceName:           Terminus:style=Regular:size=10
 !xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*dynamicColors:      false
 !xterm*utf8:               2
