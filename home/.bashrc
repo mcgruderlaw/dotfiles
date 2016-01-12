@@ -17,7 +17,7 @@ export GIT_COMMITTER_NAME="David E. McGruder"
 PS1='[\u@\h \W]\$ '
 complete -cf sudo
 complete -cf man
-[ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
+[ -n "$XTERM_VERSION" ] # && transset-df -a >/dev/null
 
 #alsi archey3
 
@@ -139,7 +139,7 @@ gitc() {
 }
 
 recent() {
-find $HOME/Dropbox/ -type f -regex ".*\.\(tex\|md\|txt\)" -mtime -$1 -not -path "*dropbox*" -exec vim "{}" +
+find $HOME/Documents/ -type f -regex ".*\.\(tex\|md\|txt\)" -mtime -$1 -not -path "*documents*" -exec vim "{}" +
 }
 
 gong() {

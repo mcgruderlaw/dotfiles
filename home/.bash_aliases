@@ -100,8 +100,8 @@ if [ $? -eq 0 ]; then \
   else \
     # @5 - Changes to working tree
     echo "\u@\H '$IRed'"$(__git_ps1 "{%s}"); \
-  fi)'$BWhite$PathFull$Color_Off''$Red':'$Color_Off' "; \
+  fi)'$BCyan$PathFull$Color_Off''$Red':'$Color_Off' "; \
 else \
   # @2 - Prompt when not in GIT repo
-  echo "\u@\H '$White$PathFull$Color_Off''$Red':'$Color_Off' "; \
+  echo "\u@\H '$Cyan$PathFull$Color_Off''$Red':'$Color_Off' "; \
 fi)'

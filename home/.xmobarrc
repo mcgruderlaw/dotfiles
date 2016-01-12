@@ -2,7 +2,7 @@ Config {
 
    -- appearance
      font =         "xft:Terminus:size=7:antialias=true"
-   , bgColor =      "black"
+   , bgColor =      "black"  -- "black" "#fdf6e3"  
    , fgColor =      "#646464"
    , position =     Top
    , border =       BottomB

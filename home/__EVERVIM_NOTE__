@@ -1,3 +1,120 @@
-Reinstall gcc-gcj and pdftk
-Tags:
+# My Workflow
+Tags:.Professional Development
+Notebook:My Notes
+## Life on the Command Line
+    * Alt-Ctl F2 for tty2, etc.
+    * Ctrl-z to push jobs to background
+    * jobs to list jobs by job #
+    * fg # to bring what I need to foreground
+    * fbgs or pdftohtml to view pdfs in framebuffer
+    * use ConqueTerm to stay in vim
+    * w3m, mutt, vimpc, td, canto
+    * Take notes in vim when reading
+
+## AUR Package Management
+    * find . -name PKGBUILD -execdir makepkg -si \;
+
+## Mutt
+    * Ctrl b to follow links, then colon to activate, then tab to jump to different links
+
+## Use Tmux
+    * Work tasks in one window
+    * Music, Torrents, Mail, Canto, Lftp, . . . in others
+
+## Use Vim
+    * Load arg list: vim `find . -name \\*.tex -print`
+    * Evervim in first tab
+    * Each file/project gets a tab
+      -Cornell Notes for studying books and videos; Feynman method
+    * Version control with git
+        -New branches for each piece of a project, i.e. Facts, Argument
+    * Madman mindmap to Carpenter outline in Markdown (write script)
+    * Case Brief form on p 26 of The Winning Case Brief
+        -CaseBrief from UltiSnips
+    * Topic charts, CX charts using snipits;
+        - Script for pulling mindmap items into outline
+    * Convert to latex at/near final draft with pandoc
+    * Spell check in vim: !aspell check %
+    * Run scripts: :call scriptname()
+    * Soft-wrap a paragraph: vipJ
+    * ''+ is X server copy/paste register
+    * ''0 is yank register
+
+## Git with Dropbox
+    * Create repo folder in ~/Documents/ofc/Cases
+    * cd ~/path/to/new-project
+    * git init
+    * cp ~/.gitignore .
+    * touch README, or echo ... > README
+    * cp litfile
+    * cp Preparation System
+    * git add ., or Gwrite
+    * git commit -m \''Initial Commit''
+    * git init --bare ~/Dropbox/git/new-project.git
+    * git remote add dropbox
+      ~/Dropbox/git/new-project.git
+    * git push -u dropbox master
+    * Load arg list: vim `find . -name \\*.tex -print`
+    * Fill in casevar.sty
+    * trial notebook
+
+## Git Workflow
+    * :Git branch [new project]
+    * :Git checkout [project branch];
+    * :Gwrite to stage
+    * :Gcommit; Shift-c
+    * :Gmove target_path for Git mv % target_path
+    * :Gremove for Git rm %
+    * don't forget to push commits to remote
+
+## Wine
+    * wine ~/.wine/drive_c/Program Files/TransMedia
+
+## Make three copies of case documents
+    * Combine all documents into one
+        -copy ~/Documents/ofc/pdfcombine.tex to directory
+        -compile pdfcombine.tex
+    * Bates number
+        -Plug file name into line 15 of pdfnumber.tex and compile
+    * Create document schedule
+
+## Convert Word files to Latex
+    * Use libreoffice --headless --convert-to
+    * Use catdoc
+    * Use xsl2csv for excel docs
+
+## Archive Old Case Files
+    * email Dropbox file contents to Evernote
+        - Subject in Client's Name
+    * Delete Dropbox Folder
+
+## Weekly Case Review
+    * Create case list with classification in Rocketmatter
+    * Review and edit list each week
+
+## Scan Documents for Evernote and Destroy
+## Opening and Closing
+    * Make a latex mindmap for the opening and closing forms
+
+## At Command
+    * Get job number, then quit: ps aux | grep mplayer; kill [job]
+
+## youtube-dl
+    * Copy url
+    * Go to a download directory
+    * youtube-dl ''[paste url]''
+    * List available formats: youtube-dl -F ''[paste url]''
+    * Audio only + Video only: youtube-dl -f 244+171 ''[paste url]''
+    * Stream video: mplayer $(youtube-dl -g ''[paste url]'')
+    * Stream video: mplayer -cookies -cookies-file /tmp/cookie.txt $(youtube-dl -g --cookies /tmp/cookie.txt -f [#] ''[paste url]'')
+    * -g gives long link
+    * yt2mp3 ''[paste url]''
+
+## Virtualbox Sharing
+    * sudo mount -t vboxsf [alias of shared host folder] [directory in box]
+
+## Bates Numbering on PDFs
+    * Assemble from one dir above; find dir/ -name ''\*.pdf'' -exec cp {} dest/ \;
+    
+    * Pdfnum script in pdf's directory
 

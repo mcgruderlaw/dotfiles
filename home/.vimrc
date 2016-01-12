@@ -18,16 +18,17 @@ Plugin 'scrooloose/syntastic'
 " Plugin 'scrooloose/nerdtree'
 Plugin 'hallison/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'astrumas/evervim'
 Plugin 'VitaliyRodnenko/geeknote'
 Plugin 'vim-scripts/ScrollColors'
-Plugin 'yuratomo/w3m.vim'
-Plugin 'Lokaltog/vim-easymotion'
+" Plugin 'yuratomo/w3m.vim'
+" Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'SirVer/ultisnips'
-Plugin 'themoken/canto-next'
-Plugin 'sjl/clam.vim'
+" Plugin 'themoken/canto-next'
+" Plugin 'sjl/clam.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'rosenfeld/conque-term'
 Plugin 'vim-scripts/Gundo'
@@ -35,10 +36,10 @@ Plugin 'vim-scripts/ag.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'itchyny/vim-gitbranch'
-Plugin 'mikewest/vimroom'
+" Plugin 'mikewest/vimroom'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
-Plugin 'psyrendust/dedrm-ebook-tools'
+" Plugin 'psyrendust/dedrm-ebook-tools'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-obsession'
 Plugin 'gerw/vim-latex-suite'
@@ -120,6 +121,8 @@ vnoremap < <gv
 nnoremap <leader>lp :!pdflatex %<cr>
 nnoremap <leader>tt :TTarget<CR>
 nnoremap <leader>TT :TTemplate<CR>
+nnoremap <leader>ca :cd $HOME/Documents/ofc/Cases<cr>
+nnoremap / /\v
 
 
 " Spell checking  ---
@@ -149,6 +152,8 @@ let g:evervim_usermarkdown='1'
 
 "open-browswer
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
+let g:netrw_banner = 1 
+let g:netrw_localcopycmd ="cp"
 nnoremap gx <Plug>(openbrowser-smart-search)
 vnoremap gx <Plug>(openbrowser-smart-search)
 
@@ -217,7 +222,8 @@ let g:pandoc#spell#enabled = 1
 
 
 
-set relativenumber
+set number
+"set relativenumber
 "set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\%P%)
 
 set laststatus=2
@@ -253,8 +259,8 @@ set tags=./tags;
 let g:easytags_dynamic_files = 1
 
 set autochdir
-let NERDTreeChDirMode=2
-nnoremap <leader>n :NERDTree .<CR>:set number<CR>
+" let NERDTreeChDirMode=2
+" nnoremap <leader>n :NERDTree .<CR>:set number<CR>
 
 syntax enable
 set tabstop=4       " number of visual spaces per TAB
@@ -262,6 +268,8 @@ set softtabstop=4   " number of spaces in tab when editing
 "set expandtab       " tabs are spaces
 "set <C-v><Tab>      " for Tab character
 
+let g:solarized_termcolors=256
+ 
 set background=dark
 
 colorscheme hipster
@@ -340,6 +348,8 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
+
+set hlsearch
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
@@ -436,10 +446,10 @@ let g:pymode_syntax_docstrings = g:pymode_syntax_all
 
 autocmd FileType tex :setlocal spell spelllang=en_us
 autocmd FileType tex :setlocal tw=70
-autocmd BufEnter,WinEnter,FocusGained * :setlocal number relativenumber
-autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
-autocmd BufNew,InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+" autocmd BufEnter,WinEnter,FocusGained * :setlocal number relativenumber
+" autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
+" autocmd BufNew,InsertEnter * :set number
+" autocmd InsertLeave * :set relativenumber
 
 " highlight last inserted text
  nnoremap gV `[v`]
@@ -625,11 +635,10 @@ endfunction
 function! Capdoc()
 python << endPython
 
-import shutil, vim
-shutil.copytree('/home/dmc/Documents/ofc/capdocs4', 'newdoc')
+import shutil, vim, os
+shutil.copytree('/home/dmc/Documents/ofc/capdocs6', 'CaptionedDocs')
 
-
-openfile = open('./Capdoc/casevar.sty', 'r+')
+openfile = open('./CaptionedDocs/Pleadings/casevar.sty', 'r+')
 openfile.read()
 
 print(openfile.read())

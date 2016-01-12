@@ -20,13 +20,13 @@ fi
 
 unclutter -grab &
 
-# xcompmgr -cCfF -r7 -o 0.98 -l-10 -t-8 -D7 &
+xcompmgr -cCfF -r7 -o 0.95 -l-10 -t-8 -D7 &
 
 canto-fetch -db
 
 # dropboxd
 
-# sh ~/.fehbg &
+sh ~/scripts/.fehbg &
 
 # exec gnome-session
 # exec startkde
