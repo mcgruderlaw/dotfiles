@@ -26,30 +26,32 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 
 myConfig = defaultConfig 
-	{ terminal           = myTerminal
-	, modMask            = myModMask
-	, borderWidth        = myBorderWidth
+    { terminal           = myTerminal
+    , modMask            = myModMask
+    , borderWidth        = myBorderWidth
     , normalBorderColor  = myNormalBorderColor
     , focusedBorderColor = myFocusedBorderColor
     , workspaces         = myWorkspaces
+    , startupHook        = myStartupHook
 --    , keys              = myKeys
 --    , layoutHook        = myLayout
 --    , manageHook        = myManageHook
 --    , handleEventHook   = myEventHook
 --    , logHook           = myLogHook
---    , startupHook       = myStartupHook
-	}
+    }
 
 myBorderWidth   = 2
-myFocusedBorderColor    = "#222200"
+myFocusedBorderColor    = "#ff0000"
+-- myFocusedBorderColor    = "#222200"
 myNormalBorderColor     = "#000000"
 myModMask       = mod4Mask
 myTerminal      = "xterm"
 -- myWorkspaces = [ "Web", "Evernote", "Drafting", "Shell", "Mail", "Music", "IRC", "News", "Transmission", "Misc."]
 myWorkspaces = [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
---myStartupHook :: X ()
---myStartupHook = do
+myStartupHook :: X ()
+myStartupHook = do
+  ewmhDesktopsStartup
   -- spawnOn "Web" "firefox"
   -- spawnOn "Drafting" "xterm"
   -- spawnOn "Shell" "xterm"

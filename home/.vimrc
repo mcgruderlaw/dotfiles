@@ -21,6 +21,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'astrumas/evervim'
 Plugin 'VitaliyRodnenko/geeknote'
 Plugin 'vim-scripts/ScrollColors'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'yuratomo/w3m.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
@@ -217,7 +218,8 @@ let g:pandoc#spell#enabled = 1
 
 
 
-set relativenumber
+set number
+" set relativenumber
 "set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\%P%)
 
 set laststatus=2
@@ -253,8 +255,8 @@ set tags=./tags;
 let g:easytags_dynamic_files = 1
 
 set autochdir
-let NERDTreeChDirMode=2
-nnoremap <leader>n :NERDTree .<CR>:set number<CR>
+"let NERDTreeChDirMode=2
+"nnoremap <leader>n :NERDTree .<CR>:set number<CR>
 
 syntax enable
 set tabstop=4       " number of visual spaces per TAB
@@ -262,12 +264,14 @@ set softtabstop=4   " number of spaces in tab when editing
 "set expandtab       " tabs are spaces
 "set <C-v><Tab>      " for Tab character
 
+" let g:solarized_termcolors=256
+
 set background=dark
 
-colorscheme hemisu
+colorscheme hipster
 "LuciusDarkHighContrast
 
-"hemisu noctu hipster lucius skittles_dark elflord badwolf starbucks molokai Tomorrow
+"solarized hemisu noctu hipster lucius skittles_dark elflord badwolf starbucks molokai Tomorrow
                             "github mayansmoke zenburn relaxedgreen
 
 "hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
@@ -340,6 +344,8 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
+
+set hlsearch
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
@@ -436,10 +442,10 @@ let g:pymode_syntax_docstrings = g:pymode_syntax_all
 
 autocmd FileType tex :setlocal spell spelllang=en_us
 autocmd FileType tex :setlocal tw=70
-autocmd BufEnter,WinEnter,FocusGained * :setlocal number relativenumber
-autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
-autocmd BufNew,InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+" autocmd BufEnter,WinEnter,FocusGained * :setlocal number relativenumber
+" autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
+" autocmd BufNew,InsertEnter * :set number
+" autocmd InsertLeave * :set relativenumber
 
 " highlight last inserted text
  nnoremap gV `[v`]

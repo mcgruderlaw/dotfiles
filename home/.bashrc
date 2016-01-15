@@ -15,7 +15,7 @@ export PYTHONPATH=$PYTHONPATH:~/usr/lib/python3.4/site-packages:~/usr/lib/python
 PS1='[\u@\h \W]\$ '
 complete -cf sudo
 complete -cf man
-[ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
+[ -n "$XTERM_VERSION" ] # && transset-df -a >/dev/null
 
 #alsi archey3
 
