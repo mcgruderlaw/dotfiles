@@ -36,7 +36,6 @@ myConfig = defaultConfig
     , normalBorderColor  = myNormalBorderColor
     , focusedBorderColor = myFocusedBorderColor
     , workspaces         = myWorkspaces
-    , startupHook        = myStartupHook
 --    , keys              = myKeys
     , layoutHook        = myLayout
 --    , manageHook        = myManageHook
