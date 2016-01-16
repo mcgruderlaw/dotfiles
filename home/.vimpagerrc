@@ -1,6 +1,6 @@
 let mapleader = ","
 set textwidth=74
-colorscheme hipster 
+colorscheme hemisu 
 set background=dark
 hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
 hi NonText ctermbg=NONE

@@ -6,7 +6,9 @@
 
 
 PATH=$PATH:~/.cabal:~/.cabal/bin:~/.vim:~/.w3m:~/bin:~/local:~/local/bin
+
 export PATH
+export PATH="${PATH}:/home/dmc/scripts"
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
 export TERM=xterm-256color
@@ -18,6 +20,5 @@ mkcd () {
   mkdir "$1"
   cd "$1"
 }
-
 
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

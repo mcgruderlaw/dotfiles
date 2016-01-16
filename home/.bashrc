@@ -9,9 +9,11 @@
 export EDITOR="vim"
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignoredups"
-export PAGER=/usr/local/bin/vimpager
+export PAGER=/usr/bin/vimpager
 export CDPATH=$CDPATH:~/Downloads:~/Dropbox:~/Documents
 export PYTHONPATH=$PYTHONPATH:~/usr/lib/python3.4/site-packages:~/usr/lib/python2.7/site-packages
+export GIT_AUTHOR_NAME="David E. McGruder"
+export GIT_COMMITTER_NAME="David E. McGruder"
 PS1='[\u@\h \W]\$ '
 complete -cf sudo
 complete -cf man
@@ -137,7 +139,7 @@ gitc() {
 }
 
 recent() {
-find $HOME/Dropbox/ -type f -regex ".*\.\(tex\|md\|txt\)" -mtime -$1 -not -path "*dropbox*" -exec vim "{}" +
+find $HOME/Documents/ -type f -regex ".*\.\(tex\|md\|txt\)" -mtime -$1 -not -path "*documents*" -exec vim "{}" +
 }
 
 gong() {

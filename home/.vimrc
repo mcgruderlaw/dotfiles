@@ -18,17 +18,17 @@ Plugin 'scrooloose/syntastic'
 " Plugin 'scrooloose/nerdtree'
 Plugin 'hallison/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'astrumas/evervim'
 Plugin 'VitaliyRodnenko/geeknote'
 Plugin 'vim-scripts/ScrollColors'
-" Plugin 'altercation/vim-colors-solarized'
-Plugin 'yuratomo/w3m.vim'
-Plugin 'Lokaltog/vim-easymotion'
+" Plugin 'yuratomo/w3m.vim'
+" Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'SirVer/ultisnips'
-Plugin 'themoken/canto-next'
-Plugin 'sjl/clam.vim'
+" Plugin 'themoken/canto-next'
+" Plugin 'sjl/clam.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'rosenfeld/conque-term'
 Plugin 'vim-scripts/Gundo'
@@ -36,10 +36,10 @@ Plugin 'vim-scripts/ag.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'itchyny/vim-gitbranch'
-Plugin 'mikewest/vimroom'
+" Plugin 'mikewest/vimroom'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
-Plugin 'psyrendust/dedrm-ebook-tools'
+" Plugin 'psyrendust/dedrm-ebook-tools'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-obsession'
 Plugin 'gerw/vim-latex-suite'
@@ -98,10 +98,10 @@ endif
 set spelllang=en_us   " US English spelling
 set dictionary+=/usr/share/dict/cracklib-small "use standard dictionary
 ""set spellfile=$HOME/Sync/vim/spell/en.utf-8.add   " my whitelist
-set thesaurus+=/home/mcgruderlaw/.vim/thesaurus/files/mthesaur.txt
+set thesaurus+=/home/dmc/.vim/thesaurus/files/mthesaur.txt
 
 nnoremap <leader>f :echo expand("%:p")<cr>
-nnoremap <leader>ev :e $HOME/.homesick/repos/dotfiles/home/.vimrc<cr>
+nnoremap <leader>ev :vsp $HOME/.homesick/repos/dotfiles/home/.vimrc<cr>
 nnoremap <leader>sv :source $HOME/.homesick/repos/dotfiles/home/.vimrc<cr>
 nnoremap <leader>eb :e $HOME/.homesick/repos/dotfiles/home/.bashrc<cr>
 nnoremap <c-j> <c-w>j
@@ -121,6 +121,8 @@ vnoremap < <gv
 nnoremap <leader>lp :!pdflatex %<cr>
 nnoremap <leader>tt :TTarget<CR>
 nnoremap <leader>TT :TTemplate<CR>
+nnoremap <leader>ca :cd $HOME/Documents/ofc/Cases<cr>
+nnoremap / /\v
 
 
 " Spell checking  ---
@@ -150,6 +152,8 @@ let g:evervim_usermarkdown='1'
 
 "open-browswer
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
+let g:netrw_banner = 1 
+let g:netrw_localcopycmd ="cp"
 nnoremap gx <Plug>(openbrowser-smart-search)
 vnoremap gx <Plug>(openbrowser-smart-search)
 
@@ -219,7 +223,7 @@ let g:pandoc#spell#enabled = 1
 
 
 set number
-" set relativenumber
+"set relativenumber
 "set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\%P%)
 
 set laststatus=2
@@ -255,8 +259,8 @@ set tags=./tags;
 let g:easytags_dynamic_files = 1
 
 set autochdir
-"let NERDTreeChDirMode=2
-"nnoremap <leader>n :NERDTree .<CR>:set number<CR>
+" let NERDTreeChDirMode=2
+" nnoremap <leader>n :NERDTree .<CR>:set number<CR>
 
 syntax enable
 set tabstop=4       " number of visual spaces per TAB
@@ -264,8 +268,8 @@ set softtabstop=4   " number of spaces in tab when editing
 "set expandtab       " tabs are spaces
 "set <C-v><Tab>      " for Tab character
 
-" let g:solarized_termcolors=256
-
+let g:solarized_termcolors=256
+ 
 set background=dark
 
 colorscheme hipster
@@ -631,11 +635,10 @@ endfunction
 function! Capdoc()
 python << endPython
 
-import shutil, vim
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/capdocs4', 'newdoc')
+import shutil, vim, os
+shutil.copytree('/home/dmc/Documents/ofc/capdocs6', 'CaptionedDocs')
 
-
-openfile = open('./Capdoc/casevar.sty', 'r+')
+openfile = open('./CaptionedDocs/Pleadings/casevar.sty', 'r+')
 openfile.read()
 
 print(openfile.read())
@@ -648,7 +651,7 @@ function! FileSys()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/fileopen/FileSys', 'FileSys')
+shutil.copytree('/home/dmc/Documents/ofc/fileopen/FileSys', 'FileSys')
 
 endPython
 endfunction
@@ -658,7 +661,7 @@ function! Pleading()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/capdocs5/Pleadings', 'newdoc')
+shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Pleadings', 'newdoc')
 
 endPython
 endfunction
@@ -668,7 +671,7 @@ function! Discovery()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/capdocs5/Discovery', 'newdoc')
+shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Discovery', 'newdoc')
 
 endPython
 endfunction
@@ -678,7 +681,7 @@ function! Motion()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/capdocs5/Motions', 'newdoc')
+shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Motions', 'newdoc')
 
 endPython
 endfunction
@@ -688,7 +691,7 @@ function! Letter()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/ltr', 'ltr')
+shutil.copytree('/home/dmc/Documents/ofc/ltr', 'ltr')
 
 endPython
 endfunction
@@ -698,7 +701,7 @@ function! Memo()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/memo', 'memo')
+shutil.copytree('/home/dmc/Documents/ofc/memo', 'memo')
 
 endPython
 endfunction
@@ -708,7 +711,7 @@ function! Note()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/notes', 'note')
+shutil.copytree('/home/dmc/Documents/ofc/notes', 'note')
 
 endPython
 endfunction
@@ -718,7 +721,7 @@ function! Pdfnum()
 python << endPython
 
 import shutil
-shutil.copytree('/home/mcgruderlaw/Documents/ofc/pdf', 'pdf')
+shutil.copytree('/home/dmc/Documents/ofc/pdf', 'pdf')
 
 endPython
 endfunction
@@ -728,7 +731,7 @@ function! Printfiles()
 python << endPython
 
 import glob
-print glob.glob("/home/mcgruderlaw/Dropbox/German, Rashard/litfile/8docsrcvd/CDMSP/2007 Biology Procedures Manual/Procedure Manual/Hyperlinks/*.pdf")
+print glob.glob("/home/dmc/Dropbox/German, Rashard/litfile/8docsrcvd/CDMSP/2007 Biology Procedures Manual/Procedure Manual/Hyperlinks/*.pdf")
 
 endPython
 endfunction
