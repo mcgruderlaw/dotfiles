@@ -1,0 +1,88 @@
+2015-08-31 06:40:58 INFO: OfflineImap 6.5.7 starting...
+  Python: 2.7.10 Platform: linux2
+  Args: /usr/bin/offlineimap --dry-run -l offlog
+2015-08-31 06:40:58 INFO: *** Processing account Personal
+2015-08-31 06:40:58 INFO: Establishing connection to imap.gmail.com:993
+2015-08-31 06:40:59 INFO: Syncing !Action: Gmail -> Maildir
+2015-08-31 06:40:59 INFO: Syncing !Next: Gmail -> Maildir
+2015-08-31 06:40:59 INFO: Syncing !Waiting On: Gmail -> Maildir
+2015-08-31 06:40:59 INFO: Establishing connection to imap.gmail.com:993
+2015-08-31 06:40:59 INFO: Establishing connection to imap.gmail.com:993
+2015-08-31 06:40:59 INFO: Syncing [Gmail]/Drafts: Gmail -> Maildir
+2015-08-31 06:40:59 INFO: Establishing connection to imap.gmail.com:993
+2015-08-31 06:40:59 INFO: Syncing [Gmail]/Important: Gmail -> Maildir
+2015-08-31 06:40:59 INFO: Syncing [Gmail]/All Mail: Gmail -> Maildir
+2015-08-31 06:41:00 INFO: Establishing connection to imap.gmail.com:993
+2015-08-31 06:41:01 INFO: Syncing [Gmail]/Starred: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing [Gmail]/Sent Mail: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing [Gmail]/Spam: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing [Gmail]/Trash: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing cmecfadmin: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing Consumer Reports: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing Dunhams: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing EFM Litigation: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing Evernote: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing LastPass: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing INBOX: Gmail -> Maildir
+2015-08-31 06:41:01 INFO: Syncing Lawfirm: Gmail -> Maildir
+2015-08-31 06:41:03 INFO: Syncing MIEB: Gmail -> Maildir
+2015-08-31 06:41:03 INFO: Syncing P/Chess: Gmail -> Maildir
+2015-08-31 06:41:03 INFO: Syncing P/Fishing: Gmail -> Maildir
+2015-08-31 06:41:03 INFO: Syncing P/Food: Gmail -> Maildir
+2015-08-31 06:41:04 INFO: Syncing P/Golf: Gmail -> Maildir
+2015-08-31 06:41:04 INFO: Syncing P/Grooming: Gmail -> Maildir
+2015-08-31 06:41:04 INFO: Syncing P/Law-Business Plan: Gmail -> Maildir
+2015-08-31 06:41:04 INFO: Syncing P/Law-Marketing: Gmail -> Maildir
+2015-08-31 06:41:04 INFO: Syncing P/Law-Office org: Gmail -> Maildir
+2015-08-31 06:41:04 INFO: Syncing P/Law-Professional Development: Gmail -> Maildir
+2015-08-31 06:41:04 INFO: Syncing P/Law-Ritual: Gmail -> Maildir
+2015-08-31 06:41:04 INFO: Syncing P/Music: Gmail -> Maildir
+2015-08-31 06:41:05 INFO: Syncing P/Opinion: Gmail -> Maildir
+2015-08-31 06:41:05 INFO: Syncing P/Physical Fitness: Gmail -> Maildir
+2015-08-31 06:41:05 INFO: Syncing P/Spirit: Gmail -> Maildir
+2015-08-31 06:41:05 INFO: Syncing Personal: Gmail -> Maildir
+2015-08-31 06:41:05 INFO: Syncing Receipts: Gmail -> Maildir
+2015-08-31 06:41:05 INFO: Syncing Rocket Matter: Gmail -> Maildir
+2015-08-31 06:41:05 INFO: Syncing Robotics: Gmail -> Maildir
+2015-08-31 06:41:05 INFO: Syncing Saved: Gmail -> Maildir
+2015-08-31 06:41:06 INFO: Syncing Silver Stallion: Gmail -> Maildir
+2015-08-31 06:41:06 INFO: Syncing SMS: Gmail -> Maildir
+2015-08-31 06:41:06 INFO: Syncing SMS Messages: Gmail -> Maildir
+2015-08-31 06:41:06 INFO: Syncing Sololittle: Gmail -> Maildir
+2015-08-31 06:41:06 INFO: Syncing Tootla: Gmail -> Maildir
+2015-08-31 06:41:07 INFO: Syncing Travel: Gmail -> Maildir
+2015-08-31 06:41:07 INFO: Syncing Voice Mails: Gmail -> Maildir
+2015-08-31 06:41:07 INFO: Syncing Work: Gmail -> Maildir
+2015-08-31 06:41:08 INFO: Syncing ZD/20120826: Gmail -> Maildir
+2015-08-31 06:41:08 INFO: Syncing ZD/20120907: Gmail -> Maildir
+2015-08-31 06:41:23 INFO: [DRYRUN] Calling hook: notmuch new
+2015-08-31 06:41:23 INFO: *** Finished account 'Personal' in 0:25
+2015-08-31 06:41:23 INFO: *** Processing account Work
+2015-08-31 06:41:23 INFO: Establishing connection to imap.gmail.com:993
+2015-08-31 06:41:24 WARNING: PLAIN authentication failed: [ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)
+2015-08-31 06:41:24 WARNING: LOGIN authentication failed: [ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)
+2015-08-31 06:41:24 ERROR: ERROR: All authentication types failed:
+	PLAIN: [ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)
+	LOGIN: [ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)
+2015-08-31 06:41:24 INFO: *** Finished account 'Work' in 0:00
+2015-08-31 06:41:24 INFO: *** Processing account Firm
+2015-08-31 06:41:24 INFO: Establishing connection to imap.gmail.com:993
+2015-08-31 06:41:25 WARNING: Terminating NOW (this may take a few seconds)...
+2015-08-31 06:41:26 INFO: *** Finished account 'Firm' in 0:01
+2015-08-31 06:41:26 WARNING: ERROR: Exceptions occurred during the run!
+2015-08-31 06:41:26 WARNING: ERROR: All authentication types failed:
+	PLAIN: [ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)
+	LOGIN: [ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)
+2015-08-31 06:41:26 WARNING: 
+Traceback:
+  File "/usr/lib/python2.7/site-packages/offlineimap/accounts.py", line 263, in syncrunner
+    self.__sync()
+  File "/usr/lib/python2.7/site-packages/offlineimap/accounts.py", line 326, in __sync
+    remoterepos.getfolders()
+  File "/usr/lib/python2.7/site-packages/offlineimap/repository/IMAP.py", line 351, in getfolders
+    imapobj = self.imapserver.acquireconnection()
+  File "/usr/lib/python2.7/site-packages/offlineimap/imapserver.py", line 451, in acquireconnection
+    self.__authn_helper(imapobj)
+  File "/usr/lib/python2.7/site-packages/offlineimap/imapserver.py", line 366, in __authn_helper
+    "failed:\n\t%s"% msg, OfflineImapError.ERROR.REPO)
+
