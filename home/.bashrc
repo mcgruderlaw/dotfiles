@@ -9,7 +9,8 @@
 export EDITOR="vim"
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignoredups"
-export PAGER=/usr/local/bin/vimpager
+# export PAGER=/usr/local/bin/vimpager
+export PAGER="less"
 export CDPATH=$CDPATH:~/Downloads:~/Dropbox:~/Documents
 export PYTHONPATH=$PYTHONPATH:~/usr/lib/python3.4/site-packages:~/usr/lib/python2.7/site-packages
 PS1='[\u@\h \W]\$ '
@@ -21,7 +22,7 @@ complete -cf man
 
 # Modified Commands
 
-alias less=$PAGER
+# alias less=$PAGER
 alias ...='../..'
 alias 92='transset-df -a .92'
 alias Agg='mux Agg'
@@ -40,7 +41,7 @@ alias homevbox='ssh mcgruderlaw@192.168.1.71'
 alias lbg='xterm -bg white -fg blue &'
 alias l='ls -lh --color=auto'
 alias ls='ls --color=auto'
-#alias man='w3mman'
+# alias man='w3mman'
 alias mountcd='sudo mount /dev/cdrom /media/cdrom'
 alias mountT2='sudo mount -t ntfs-3g /dev/sdc1 /media/Toshiba2'
 alias mountT='sudo mount -t ntfs-3g /dev/sdb1 /media/Toshiba'

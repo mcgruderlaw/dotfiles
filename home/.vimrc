@@ -21,7 +21,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'astrumas/evervim'
 Plugin 'VitaliyRodnenko/geeknote'
 Plugin 'vim-scripts/ScrollColors'
-Plugin 'yuratomo/w3m.vim'
+" Plugin 'yuratomo/w3m.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vimoutliner/vimoutliner'
@@ -36,7 +36,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'itchyny/vim-gitbranch'
 Plugin 'mikewest/vimroom'
-Plugin 'xolox/vim-easytags'
+" Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'psyrendust/dedrm-ebook-tools'
 Plugin 'tpope/vim-surround'
@@ -44,7 +44,7 @@ Plugin 'tpope/vim-obsession'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'gerw/vim-tex-syntax'
 Plugin 'stefandtw/quickfix-reflector.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'noahfrederick/vim-noctu'
 Plugin 'noahfrederick/vim-hemisu'
 Plugin 'jonathanfilip/lucius'
@@ -249,8 +249,8 @@ set hidden
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
 set ruler
 
-set tags=./tags;
-let g:easytags_dynamic_files = 1
+" set tags=./tags;
+" let g:easytags_dynamic_files = 1
 
 set autochdir
 let NERDTreeChDirMode=2
