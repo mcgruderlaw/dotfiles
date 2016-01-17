@@ -112,7 +112,7 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>
 "cnoremap sudow :w !sudo tee % >/dev/null
-nnoremap <leader>ww :w !sudo tee % >/dev/null
+nnoremap <leader>ss :w !sudo tee % >/dev/null<cr>
 nnoremap <leader>s <esc>:w<cr>
 inoremap <leader>s <esc>:w<cr>
 "nnoremap ; :
