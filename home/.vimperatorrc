@@ -1,0 +1,94 @@
+" 3.10.1 (created: 2015/08/25 00:41:59)
+" File: ~/.vimperatorrc
+" Source: github
+" Author: Todd <https://about.me/vimer>
+" Sources used: https://github.com/gowiden/vimperatorrc/blob/master/.vimperatorrc
+
+" variables
+" this must be set before map operation, otherwise use default value.
+let mapleader=','
+
+" title bar
+set titlestring="Iceweasel Vimperator"
+
+" surround com and net -> <CTRL>+<ENTER> -> .com/.net
+cnoremap<S-Return> <End>.org<Home><C-Right>www.<CR>
+cnoremap<C-Return> <End>.com<Home><C-Right>www.<CR>
+
+set hintchars=asdfghjkl;
+
+" a max number of listing items
+set maxitems=6
+
+" show tabbar only, or not
+set gui=none,notabs,addons
+map <F2> :set gui=invmenu<Return>
+map <F3> :set gui=invnavigation<Return>
+map <F4> :set gui=invaddons<Return>
+
+" tab operation
+noremap q gT
+noremap w gt
+noremap <C-p> :tabmove! -1<CR>
+noremap <C-n> :tabmove! +1<CR>
+
+" hide nav-bar
+set gui=nonavigation
+set suggestengines=''
+set wildmode=list:full
+set animations
+
+" colorscheme
+colorscheme indigo
+
+" normal-mode
+set focuscontent
+
+" I don't like beeps
+set visualbell
+" useful for command-line completion
+set autocomplete
+set wildmode=list:longest,full
+
+" autocmds
+" clear all autocmds to avoid troubles from loading rc fle several times
+autocmd!
+
+" finish
+echo "hello world!"
+
+" y & Y
+noremap y Y
+noremap Y y
+
+" vim external editor
+set editor=gvim\ -f
+"set editor=urxvt\ -e\ vim
+
+" sourcing .vimperatorrc
+"noremap <Leader>r :source ~/.vimperatorrc<CR>
+
+" hint, disables fcitx
+nnoremap <silent> f :silent !fcitx-remote -c<CR>f
+nnoremap <silent> F :silent !fcitx-remote -c<CR>F
+nnoremap <silent> : :silent !fcitx-remote -c<CR>:
+
+" tab-bar-2px
+nnoremap <C-L> :set gui=navigation<CR><C-L>
+nnoremap <Esc> <Esc>:set gui=nonavigation<CR>
+
+" shortcuts open URL
+noremap ta :tabopen https://appengine.google.com/<CR>
+noremap tb :tabopen https://pan.baidu.com<CR>
+noremap td :tabopen https://drive.google.com/<CR>
+noremap tm :tabopen https://mail.google.com/<CR>
+noremap tg :tabopen https://plus.google.com/<CR>
+noremap tq :tabopen https://groups.google.com/<CR>
+noremap tp :tabopen https://picasaweb.google.com/<CR>
+noremap tl :tabopen outlook.com<CR>
+noremap tr :tabopen https://translate.google.com/#auto/zh-CN/<CR>
+noremap ts :tabopen https://www.google.com/ncr<CR>
+noremap tw :tabopen https://wx.qq.com<CR>
+
+source! /home/sysop/.vimperatorrc.local
+" vim: set ft=vimperator:
