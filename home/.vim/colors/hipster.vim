@@ -27,7 +27,8 @@ hi Normal         guifg=#f9f8ff   guibg=#000000   guisp=NONE      gui=NONE   cte
 hi Cursor         guifg=NONE      guibg=#cd6f5c   guisp=#cd6f5c   gui=NONE   ctermfg=NONE   ctermbg=173    cterm=NONE
 hi Visual         guifg=#c3c6ca   guibg=#554d4b   guisp=NONE      gui=NONE   ctermfg=251    ctermbg=239    cterm=NONE
 hi Visualnos      guifg=#c3c6ca   guibg=#303030   guisp=NONE      gui=NONE   ctermfg=251    ctermbg=236    cterm=NONE
-hi Search         guifg=#000000   guibg=#8dabcd   guisp=#8dabcd   gui=NONE   ctermfg=NONE   ctermbg=110    cterm=NONE
+hi Search         guifg=#000000   guibg=#8dabcd   guisp=#8dabcd   gui=NONE   ctermfg=NONE   ctermbg=196    cterm=NONE
+hi IncSearch      guifg=#000000   guibg=#8dabcd   guisp=#8dabcd   gui=NONE   ctermfg=NONE   ctermbg=196    cterm=NONE
 hi Folded         guifg=#857b6f   guibg=#000000   guisp=NONE      gui=NONE   ctermfg=241    ctermbg=233    cterm=NONE
 hi StatusLineNC   guifg=NONE      guibg=#262626   guisp=#262626   gui=NONE   ctermfg=NONE   ctermbg=235    cterm=NONE
 hi VertSplit      guifg=#444444   guibg=#444444   guisp=NONE      gui=NONE   ctermfg=238    ctermbg=238    cterm=NONE
@@ -60,7 +61,8 @@ hi Todo           guifg=#a1481e   guibg=NONE      guisp=NONE      gui=NONE   cte
 " Linking
 hi! link          FoldColumn      Folded
 hi! link          CursorColumn    CursorLine
-hi! link          Search          CursorLine
+"hi! link          Search          CursorLine
+"hi! link          Search          IncSearch
 hi! link          NonText         LineNr
 hi! link          DiffText        DiffChange
 hi! link          SpellBad        ErrorMsg
@@ -77,7 +79,7 @@ hi! link          Title           Function
 " DiffText
 " Directory
 " FoldColumn
-" IncSearch
+""" IncSearch
 " Menu
 " ModeMsg
 " MoreMsg
