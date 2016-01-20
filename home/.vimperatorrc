@@ -9,7 +9,7 @@
 let mapleader=','
 
 " title bar
-set titlestring="Iceweasel Vimperator"
+set titlestring="DMC Firefox"
 
 " surround com and net -> <CTRL>+<ENTER> -> .com/.net
 cnoremap<S-Return> <End>.org<Home><C-Right>www.<CR>
@@ -55,7 +55,7 @@ set wildmode=list:longest,full
 autocmd!
 
 " finish
-echo "hello world!"
+echo "Sourced"
 
 " y & Y
 noremap y Y
@@ -66,7 +66,7 @@ set editor=gvim\ -f
 "set editor=urxvt\ -e\ vim
 
 " sourcing .vimperatorrc
-"noremap <Leader>r :source ~/.vimperatorrc<CR>
+noremap <Leader>r :source ~/.vimperatorrc<CR>
 
 " hint, disables fcitx
 nnoremap <silent> f :silent !fcitx-remote -c<CR>f
