@@ -18,7 +18,7 @@ cnoremap<C-Return> <End>.com<Home><C-Right>www.<CR>
 set hintchars=asdfghjkl;
 
 " a max number of listing items
-set maxitems=6
+set maxitems=40
 
 " show tabbar only, or not
 set gui=none,notabs,addons
