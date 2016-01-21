@@ -105,3 +105,6 @@ else \
   # @2 - Prompt when not in GIT repo
   echo "\u@\H '$Cyan$PathFull$Color_Off''$Red':'$Color_Off' "; \
 fi)'
+
+
+alias startx='ssh-agent startx'
