@@ -79,7 +79,7 @@ set editor=gvim\ -f
 "set editor=urxvt\ -e\ vim
 
 " sourcing .vimperatorrc
-noremap <Leader>r :source ~/.vimperatorrc<CR>
+noremap <Leader>r :source ~/.homesick/repos/dotfiles/home/.vimperatorrc<CR>
 
 " hint, disables fcitx
 nnoremap <silent> f :silent !fcitx-remote -c<CR>f
