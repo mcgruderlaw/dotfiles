@@ -17,6 +17,19 @@ cnoremap<C-Return> <End>.com<Home><C-Right>www.<CR>
 
 set hintchars=asdfghjkl;
 
+" Select candidates like vim
+cmap <C-n> <Tab>
+cmap <C-p> <S-Tab>
+
+" show link destination in status line
+set showstatuslinks=2
+
+" Default search engine
+set defsearch=duckduckgo
+
+" Highlight search keyword
+set hlsearch
+
 " a max number of listing items
 set maxitems=40
 
