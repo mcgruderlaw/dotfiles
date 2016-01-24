@@ -22,7 +22,7 @@ cmap <C-n> <Tab>
 cmap <C-p> <S-Tab>
 
 " show link destination in status line
-set showstatuslinks=2
+set showstatuslinks=1
 
 " Default search engine
 set defsearch=duckduckgo
@@ -34,7 +34,7 @@ set hlsearch
 set maxitems=40
 
 " show tabbar only, or not
-set gui=none,notabs,addons
+set gui=all,nomenu,nobookmarks,notabs,addons
 map <F2> :set gui=invmenu<Return>
 map <F3> :set gui=invnavigation<Return>
 map <F4> :set gui=invaddons<Return>
@@ -65,7 +65,7 @@ set wildmode=list:longest,full
 
 " autocmds
 " clear all autocmds to avoid troubles from loading rc fle several times
-autocmd!
+"autocmd!
 
 " finish
 echo "Sourced"

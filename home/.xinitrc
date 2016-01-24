@@ -26,6 +26,8 @@ canto-fetch -db
 
 # dropboxd
 
+eval $(ssh-agent)
+
 sh ~/scripts/.fehbg &
 
 # exec gnome-session
