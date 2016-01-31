@@ -1,6 +1,11 @@
 # My Workflow
 Tags:.Professional Development
-Notebook:My Notes
+## VBoxManage
+* VBoxManage startvm MediaVM -type headless
+* VBoxManage controlvm MediaVM poweroff
+* VBoxManage showvminfo WebVM | less
+* rdesktop -a 16 -N 192.168.2.2:3066 or 3038
+
 ## Life on the Command Line
     * Alt-Ctl F2 for tty2, etc.
     * Ctrl-z to push jobs to background
@@ -21,8 +26,12 @@ Notebook:My Notes
     * Work tasks in one window
     * Music, Torrents, Mail, Canto, Lftp, . . . in others
 
+## SSH
+    * ssh -L 12345:localhost:80 root@23.124.50.217 -p 39966
+
 ## Use Vim
     * Load arg list: vim `find . -name \\*.tex -print`
+    * Load arg list in vim: `arga **/*.tex`
     * Evervim in first tab
     * Each file/project gets a tab
       -Cornell Notes for studying books and videos; Feynman method

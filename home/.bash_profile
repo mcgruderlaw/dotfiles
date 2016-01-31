@@ -12,6 +12,7 @@ export PATH="${PATH}:/home/dmc/scripts"
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
 export TERM=xterm-256color
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" 
 
 unset PROMPT_COMMAND
 
@@ -21,4 +22,4 @@ mkcd () {
   cd "$1"
 }
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec ssh-agent startx

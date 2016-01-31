@@ -17,24 +17,11 @@ cnoremap<C-Return> <End>.com<Home><C-Right>www.<CR>
 
 set hintchars=asdfghjkl;
 
-" Select candidates like vim
-cmap <C-n> <Tab>
-cmap <C-p> <S-Tab>
-
-" show link destination in status line
-set showstatuslinks=1
-
-" Default search engine
-set defsearch=duckduckgo
-
-" Highlight search keyword
-set hlsearch
-
 " a max number of listing items
 set maxitems=40
 
 " show tabbar only, or not
-set gui=all,nomenu,nobookmarks,notabs,addons
+set gui=none,notabs,addons
 map <F2> :set gui=invmenu<Return>
 map <F3> :set gui=invnavigation<Return>
 map <F4> :set gui=invaddons<Return>
@@ -65,7 +52,7 @@ set wildmode=list:longest,full
 
 " autocmds
 " clear all autocmds to avoid troubles from loading rc fle several times
-"autocmd!
+autocmd!
 
 " finish
 echo "Sourced"
@@ -79,7 +66,7 @@ set editor=gvim\ -f
 "set editor=urxvt\ -e\ vim
 
 " sourcing .vimperatorrc
-noremap <Leader>r :source ~/.homesick/repos/dotfiles/home/.vimperatorrc<CR>
+noremap <Leader>r :source ~/.vimperatorrc<CR>
 
 " hint, disables fcitx
 nnoremap <silent> f :silent !fcitx-remote -c<CR>f
