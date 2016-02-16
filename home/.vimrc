@@ -154,6 +154,8 @@ let g:evervim_usermarkdown='1'
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 let g:netrw_banner = 1 
 let g:netrw_localcopycmd ="cp"
+let g:netrw_keepdir= 0
+let g:netrw_rsync_cmd="rsync -a --delete -e ssh"
 nnoremap gx <Plug>(openbrowser-smart-search)
 vnoremap gx <Plug>(openbrowser-smart-search)
 
@@ -195,7 +197,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-"autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 au BufEnter,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 set shellslash
@@ -217,7 +219,7 @@ let g:pandoc#command#autoexec_on_writes = 1
 let g:pandoc#command#autoexec_command = "Pandoc! pdf"
 let g:pandoc#formatting#mode = "ha"
 let g:pandoc#formatting#textwidth = 72
-let g:pandoc#formatting#equalprg = "pandoc -t markdown --reference-links [--columns {g:pandoc#formatting#textwidth}|no-wrap]"
+"let g:pandoc#formatting#equalprg = "pandoc -t markdown --reference-links [--columns {g:pandoc#formatting#textwidth}|no-wrap]"
 let g:pandoc#spell#enabled = 1
 
 
