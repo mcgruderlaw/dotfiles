@@ -23,7 +23,7 @@ hi PMenuThumb     guifg=NONE      guibg=#a4a5a8   guisp=#a4a5a8   gui=NONE   cte
 endif
 
 " General colors
-hi Normal         guifg=#f9f8ff   guibg=#000000   guisp=NONE      gui=NONE   ctermfg=239     ctermbg=NONE   cterm=NONE
+hi Normal         guifg=#f9f8ff   guibg=#000000   guisp=NONE      gui=NONE   ctermfg=243     ctermbg=NONE   cterm=NONE
 hi Cursor         guifg=NONE      guibg=#cd6f5c   guisp=#cd6f5c   gui=NONE   ctermfg=NONE   ctermbg=173    cterm=NONE
 hi Visual         guifg=#c3c6ca   guibg=#554d4b   guisp=NONE      gui=NONE   ctermfg=251    ctermbg=239    cterm=NONE
 hi Visualnos      guifg=#c3c6ca   guibg=#303030   guisp=NONE      gui=NONE   ctermfg=251    ctermbg=236    cterm=NONE

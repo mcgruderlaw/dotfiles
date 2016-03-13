@@ -7,6 +7,7 @@
 [[ -z $XDG_CONFIG_HOME ]] && export XDG_CONFIG_HOME="$HOME/.config"
 
 export EDITOR="vim"
+export BROWSER="firefox"
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignoredups"
 # export PAGER=/usr/local/bin/vimpager
@@ -62,7 +63,8 @@ alias trl='transmission-remote -l'
 alias trsi='transmission-remote -si'
 alias t='tmux -2'
 alias vb='virtualbox &'
-alias v='vim --servername VIMSERVER --remote-silent'
+alias v='vim --servername VIMSERVER'
+alias vs='vim --servername VIMSERVER --remote-silent'
 alias wf='sudo wifi-menu'
 alias x='startx'
 alias z='z.sh'

@@ -121,7 +121,7 @@ vnoremap < <gv
 nnoremap <leader>lp :!pdflatex %<cr>
 nnoremap <leader>tt :TTarget<CR>
 nnoremap <leader>TT :TTemplate<CR>
-nnoremap <leader>ca :cd $HOME/Documents/ofc/Cases<cr>
+nnoremap <leader>ca :cd $HOME/Documents/ofc/Cases/
 nnoremap / /\v
 
 
