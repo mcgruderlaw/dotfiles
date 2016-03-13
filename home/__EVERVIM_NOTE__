@@ -6,6 +6,14 @@ Tags:.Professional Development
 * VBoxManage showvminfo WebVM | less
 * rdesktop -a 16 -N 192.168.2.2:3066 or 3038
 
+## Convert jpg to pdf
+    * convert x.jpg y.pdf
+
+## Play video or audio from server on laptop
+    * sshfs dmc@192.168.2.2:/data/Media /home/mcgruderlaw/Downloads/tmp/ -p 39966
+    * mplayer ~/Downloads/tmp/Movies/. . .
+    * fusermount -u [mountpoint] to unmount
+
 ## Life on the Command Line
     * Alt-Ctl F2 for tty2, etc.
     * Ctrl-z to push jobs to background
@@ -17,7 +25,17 @@ Tags:.Professional Development
     * Take notes in vim when reading
 
 ## AUR Package Management
+    * cower -s [pkg]
+    * cower -d [pkg]
+    * makepkg -si
+    * cower -u
+    * cower -ud
     * find . -name PKGBUILD -execdir makepkg -si \;
+    * delete directories
+    * OR download the tarball from AUR
+    * tar xzvf [tarball]
+    * cd to dir with PKGBUILD
+    * makepkg -si
 
 ## Mutt
     * Ctrl b to follow links, then colon to activate, then tab to jump to different links

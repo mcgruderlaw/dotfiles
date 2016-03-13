@@ -45,7 +45,8 @@ myConfig = defaultConfig
 	}
 
 myBorderWidth   = 2
-myFocusedBorderColor    = "#ff0000"
+myFocusedBorderColor    = "#005f00"
+-- myFocusedBorderColor    = "#ff0000"
 -- myFocusedBorderColor    = "#222200"
 myNormalBorderColor     = "#000000"
 myModMask       = mod4Mask
