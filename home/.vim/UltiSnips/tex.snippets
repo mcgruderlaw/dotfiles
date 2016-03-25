@@ -1,0 +1,44 @@
+snippet enum "enumerate block"
+\begin{enumerate}
+
+\item $0
+
+\end{enumerate}
+endsnippet
+
+
+snippet mmap "Mind Map"
+\documentclass{article}
+    
+    \usepackage{tikz}
+    \usetikzlibrary{mindmap,trees}
+    \tikzset{concept/.append style={fill={none}}}
+	\usepackage{enumerate}
+
+    \begin{document}
+    \pagestyle{empty}
+	\centering\begin{tikzpicture}[grow cyclic, text width=2.7cm, align=flush
+	  center, scale=0.50, transform shape]
+      \path[mindmap,concept color=black,text=black, grow cyclic, align=flush center, level
+	  1 concept/.append style={level distance=7cm,sibling angle=-90}, level
+	2/.style={level distance=7cm,sibling angle=30},
+  ]
+        node[concept] {$1}
+        [clockwise from=0]
+        child[concept color=green!50!black] {
+		  node[concept] {$0}
+        [clockwise from=45]
+          child { node[concept] {Thought} }
+  };
+    \end{tikzpicture}
+
+\begin{enumerate}
+
+		\item 
+
+\end{enumerate}
+
+\end{document}
+
+endsnippet
+
