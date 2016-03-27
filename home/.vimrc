@@ -45,7 +45,7 @@ Plugin 'tpope/vim-obsession'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'gerw/vim-tex-syntax'
 Plugin 'stefandtw/quickfix-reflector.vim'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'noahfrederick/vim-noctu'
 Plugin 'noahfrederick/vim-hemisu'
 Plugin 'jonathanfilip/lucius'
@@ -688,6 +688,15 @@ shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Motions', 'newdoc')
 endPython
 endfunction
 
+function! FeynmanNote()
+python << endPython
+
+import shutil
+shutil.copytree('/home/dmc/Documents/notes', 'note')
+
+endPython
+endfunction
+
 
 function! Letter()
 python << endPython
@@ -709,7 +718,7 @@ endPython
 endfunction
 
 
-function! Note()
+function! MindMap()
 python << endPython
 
 import shutil
