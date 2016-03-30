@@ -121,6 +121,7 @@ vnoremap < <gv
 nnoremap <leader>lp :!pdflatex %<cr>
 nnoremap <leader>tt :TTarget<CR>
 nnoremap <leader>TT :TTemplate<CR>
+nnoremap <leader>sp :!aspell check %<CR>
 nnoremap <leader>ca :cd $HOME/Documents/ofc/Cases/
 nnoremap / /\v
 
