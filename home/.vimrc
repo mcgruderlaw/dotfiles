@@ -145,6 +145,8 @@ nnoremap <silent> <leader>en :<C-u>EvervimCreateNote<CR>
 nnoremap <silent> <leader>eB :<C-u>EvervimOpenBrowser<CR>
 nnoremap <silent> <leader>ec :<C-u>EvervimOpenClient<CR>
 nnoremap <leader>es :<C-u>EvervimSearchByQuery<SPACE>
+nnoremap <leader>af :<C-u>EvervimSearchByQuery Affirmation<CR>
+nnoremap <leader>wf :<C-u>EvervimSearchByQuery My Workflow<CR>
 nnoremap <silent> <leader>et :<C-u>EvervimSearchByQuery<SPACE>tag:1-Now,tag:2-Next,tag:3-Soon<CR>
 nnoremap <silent> <leader>etl :<C-u>EvervimSearchByQuery<SPACE>tag:4-Later -tag:5-Someday<CR>
 "let g:evervim_splitoption=''
