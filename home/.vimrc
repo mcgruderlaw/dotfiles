@@ -45,7 +45,7 @@ Plugin 'tpope/vim-obsession'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'gerw/vim-tex-syntax'
 Plugin 'stefandtw/quickfix-reflector.vim'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'noahfrederick/vim-noctu'
 Plugin 'noahfrederick/vim-hemisu'
 Plugin 'jonathanfilip/lucius'
@@ -121,6 +121,7 @@ vnoremap < <gv
 nnoremap <leader>lp :!pdflatex %<cr>
 nnoremap <leader>tt :TTarget<CR>
 nnoremap <leader>TT :TTemplate<CR>
+nnoremap <leader>sp :!aspell check %<CR>
 nnoremap <leader>ca :cd $HOME/Documents/ofc/Cases/
 nnoremap / /\v
 
@@ -145,6 +146,8 @@ nnoremap <silent> <leader>en :<C-u>EvervimCreateNote<CR>
 nnoremap <silent> <leader>eB :<C-u>EvervimOpenBrowser<CR>
 nnoremap <silent> <leader>ec :<C-u>EvervimOpenClient<CR>
 nnoremap <leader>es :<C-u>EvervimSearchByQuery<SPACE>
+nnoremap <leader>af :<C-u>EvervimSearchByQuery Affirmation<CR>
+nnoremap <leader>wf :<C-u>EvervimSearchByQuery My Workflow<CR>
 nnoremap <silent> <leader>et :<C-u>EvervimSearchByQuery<SPACE>tag:1-Now,tag:2-Next,tag:3-Soon<CR>
 nnoremap <silent> <leader>etl :<C-u>EvervimSearchByQuery<SPACE>tag:4-Later -tag:5-Someday<CR>
 "let g:evervim_splitoption=''
@@ -688,6 +691,15 @@ shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Motions', 'newdoc')
 endPython
 endfunction
 
+function! FeynmanNote()
+python << endPython
+
+import shutil
+shutil.copytree('/home/dmc/Documents/notes', 'note')
+
+endPython
+endfunction
+
 
 function! Letter()
 python << endPython
@@ -709,7 +721,7 @@ endPython
 endfunction
 
 
-function! Note()
+function! MindMap()
 python << endPython
 
 import shutil
