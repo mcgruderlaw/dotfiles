@@ -30,6 +30,8 @@ eval $(ssh-agent)
 
 sh ~/scripts/.fehbg &
 
+/usr/bin/VBoxClient-all
+
 # exec gnome-session
 # exec startkde
 exec startxfce4
