@@ -30,11 +30,13 @@ eval $(ssh-agent)
 
 sh ~/scripts/.fehbg &
 
+/usr/bin/VBoxClient-all
+
 # exec gnome-session
 # exec startkde
-# exec startxfce4
+exec startxfce4
 # exec awesome
-exec xmonad
+# exec xmonad
 # ...or the Window Manager of your choice
 
 
