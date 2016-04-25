@@ -201,3 +201,4 @@ tara() {
 leah() {
 		feh --image-bg black --scale-down ~/Downloads/leah
 }
+if [[ $TMUX ]]; then source ~/.tmux-git/tmux-git.sh; fi
