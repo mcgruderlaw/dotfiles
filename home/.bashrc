@@ -68,6 +68,7 @@ alias vs='vim --servername VIMSERVER --remote-silent'
 alias wf='sudo wifi-menu'
 alias x='startx'
 alias z='z.sh'
+alias mountm='sudo sshfs dmc@23.124.50.217:/data/Media/Music /media/Music/ -p 39966'
 
 # If you work with git, you've probably had that nagging sensation of not knowing what branch you are on. Worry no longer!
 
