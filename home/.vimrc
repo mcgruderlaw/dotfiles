@@ -159,6 +159,7 @@ let g:netrw_banner = 1
 let g:netrw_localcopycmd ="cp"
 let g:netrw_keepdir= 0
 let g:netrw_rsync_cmd="rsync -a --delete -e ssh"
+let g:netrw_liststyle= 2
 nnoremap gx <Plug>(openbrowser-smart-search)
 vnoremap gx <Plug>(openbrowser-smart-search)
 
