@@ -6,6 +6,8 @@
 [[ $- != *i* ]] && return
 [[ -z $XDG_CONFIG_HOME ]] && export XDG_CONFIG_HOME="$HOME/.config"
 
+#if [[ $TMUX ]]; then source ~/.tmux-git/tmux-git.sh; fi
+
 export EDITOR="vim"
 export BROWSER="firefox"
 export HISTIGNORE="clear:history"
@@ -201,4 +203,3 @@ tara() {
 leah() {
 		feh --image-bg black --scale-down ~/Downloads/leah
 }
-if [[ $TMUX ]]; then source ~/.tmux-git/tmux-git.sh; fi
