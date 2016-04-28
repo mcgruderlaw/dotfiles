@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 [[ -z $XDG_CONFIG_HOME ]] && export XDG_CONFIG_HOME="$HOME/.config"
 
-#if [[ $TMUX ]]; then source ~/.tmux-git/tmux-git.sh; fi
+if [[ \$TMUX ]]; then source ~/.tmux-git/tmux-git.sh; fi
 
 export EDITOR="vim"
 export BROWSER="firefox"
