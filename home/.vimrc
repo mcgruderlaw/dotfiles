@@ -104,7 +104,7 @@ set thesaurus+=/home/dmc/.vim/thesaurus/files/mthesaur.txt
 nnoremap <leader>f :echo expand("%:p")<cr>
 nnoremap <leader>ev :vsp $HOME/.homesick/repos/dotfiles/home/.vimrc<cr>
 nnoremap <leader>sv :source $HOME/.homesick/repos/dotfiles/home/.vimrc<cr>
-nnoremap <leader>eb :e $HOME/.homesick/repos/dotfiles/home/.bashrc<cr>
+nnoremap <leader>eb :vsp $HOME/.homesick/repos/dotfiles/home/.bashrc<cr>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
