@@ -91,6 +91,11 @@ nnoremap <C-L> :set gui=navigation<CR><C-L>
 nnoremap <Esc> <Esc>:set gui=nonavigation<CR>
 
 " shortcuts open URL
+noremap ps :tabopen chrome://lastpass/content/home2.xul#/<CR>
+noremap rm :tabopen https://www.rocketmatter.net/mcgruderlaw/<CR>
+noremap ic :tabopen http://www.icle.org/modules/MyICLE/myresources.aspx/<CR>
+noremap ds :tabopen https://deadspin.com/<CR>
+noremap ds :tabopen https://deadspin.com/<CR>
 noremap ta :tabopen https://appengine.google.com/<CR>
 noremap tb :tabopen https://pan.baidu.com<CR>
 noremap td :tabopen https://drive.google.com/<CR>
