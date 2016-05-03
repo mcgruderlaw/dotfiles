@@ -207,6 +207,7 @@ au BufEnter,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,tr
 
 set shellslash
 set grepprg=grep\ -nH\ $*
+set sw=2
 let g:tex_flavor='latex'
 "let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
 "let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
@@ -548,6 +549,21 @@ command! Code silent! iunmap <buffer> .|
             \     tw=74 fo=cqrl showbreak=… nu|
             \ silent! autocmd! PROSE * <buffer>
 
+" open with locate or find command
+" tutorial video: https://www.youtube.com/watch?v=X0KPl5O006M
+map <leader>o :exec '!xdg-open ' . shellescape(getline('.')) <CR><CR>
+
+map <leader>mp :exec '!mplayer ' . shellescape(getline('.')) <CR><CR>
+
+" stream justin tv ..etc
+map <leader>ls :exec '!livestreamer -p mplayer ' . shellescape(getline('.')) . 'best' <CR><CR>
+
+" watch streaming porn
+map <leader>p :exec '!mplayer $(youtube-dl -g ' . shellescape(getline('.')) . ')' <CR><CR>
+
+" download videos/files
+map <leader>yt :exec '!cd ~/Downloads; youtube-dl ' . shellescape(getline('.')) <CR><CR>
+map <leader>wg :exec '!cd ~/Downloads; wget -c ' . shellescape(getline('.')) <CR><CR>
 
 iabbr Email parkermcgruderlaw@gmail.com
 iabbr dem David E. McGruder
