@@ -1,18 +1,44 @@
 # My Workflow
 Tags:.Professional Development
+Notebook:My Notes
+## SSH to Servers
+* dmcserver: ssh -p 39966 dmc@192.168.2.2
+* mediasrv: ssh -p 39937 dmc@192.168.2.3
+* webvm2:  ssh -p 39938 dmc@192.168.2.4
+
 ## VBoxManage
 * VBoxManage startvm MediaVM -type headless
 * VBoxManage controlvm MediaVM poweroff
-* VBoxManage showvminfo WebVM | less
-* rdesktop -a 16 -N 192.168.2.2:3066 or 3038
+* VBoxManage showvminfo WebVM2 | less
+
+## Rdesktop
+* MediaVM: rdesktop -a 24 -K 192.168.2.2:3066
+* WebVM2: rdesktop -a 24 -K 192.168.2.2:3037
+
+## Emby
+* http://91.108.183.26:8096
+
+## wget to download website
+* wget -m http://filmsbykris.com -E
+* wget -m http://filmsbykris.com -E -nH     # no folder
+* wget -m http://filmsbykris.com -E -nH -P directory
 
 ## Convert jpg to pdf
     * convert x.jpg y.pdf
 
-## Play video or audio from server on laptop
+## Rsync Remote server to local
+* rsync -avzhe 'ssh -p 39966' --progress
+dmc@23.124.50.217:/data/Media/Music/ /tmp/
+
+## Rsync local to server
+* sudo rsync -avzhe 'ssh -p 39966' --progress SeayDivorce
+dmc@23.124.50.217:/data/Documents/Cases
+
+# Play video or audio from server on laptop
     * sshfs dmc@192.168.2.2:/data/Media /home/mcgruderlaw/Downloads/tmp/ -p 39966
     * mplayer ~/Downloads/tmp/Movies/. . .
     * fusermount -u [mountpoint] to unmount
+    * # umount -l [mountpoint] if above doesn't work
 
 ## Life on the Command Line
     * Alt-Ctl F2 for tty2, etc.
@@ -37,12 +63,27 @@ Tags:.Professional Development
     * cd to dir with PKGBUILD
     * makepkg -si
 
+## Install Package from Source Code
+    * download tarball to build directory, curl -L -O https . . .
+    * tar xvf [tarball]
+    * cd to install dir
+    * ./configure
+    * make
+    * make install
+    * see https://www.youtube.com/watch?feature=player_detailpage&v=9k38XHsL77A
+
 ## Mutt
     * Ctrl b to follow links, then colon to activate, then tab to jump to different links
 
 ## Use Tmux
     * Work tasks in one window
     * Music, Torrents, Mail, Canto, Lftp, . . . in others
+    * Shift + Mouse for regular terminal mouse activities
+    * PREFIX+[ for copy mode/navigation
+    *     /: search
+    *     SPACE + movement: select
+    *     ENTER: copy/exit
+    * PREFIX+] for paste
 
 ## SSH
     * ssh -L 12345:localhost:80 root@23.124.50.217 -p 39966
@@ -66,6 +107,9 @@ Tags:.Professional Development
     * Soft-wrap a paragraph: vipJ
     * ''+ is X server copy/paste register
     * ''0 is yank register
+
+## Git with Bitbucket
+    * case.sh ``[README Message]`` doe-john.git
 
 ## Git with Dropbox
     * Create repo folder in ~/Documents/ofc/Cases
@@ -93,6 +137,10 @@ Tags:.Professional Development
     * :Gmove target_path for Git mv % target_path
     * :Gremove for Git rm %
     * don't forget to push commits to remote
+
+## Clone Bitbucket Repos
+    * dmclaptop: git clone ssh://git@bit:22/sololittle/REPO.git
+        - see ~/.ssh/config for ssh host names and settings
 
 ## Wine
     * wine ~/.wine/drive_c/Program Files/TransMedia
