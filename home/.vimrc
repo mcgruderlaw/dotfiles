@@ -707,6 +707,11 @@ import shutil
 shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Motions', 'newdoc')
 
 endPython
+
+execute "args newdoc/**/*.sty\<cr>"
+execute "argadd ../**/*.tex\<cr>"
+execute "echom 'Motion loaded!'"
+
 endfunction
 
 function! FeynmanNote()
