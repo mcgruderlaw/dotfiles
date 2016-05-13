@@ -167,7 +167,7 @@ EOF
 }
 
 w3c() {
-		w3m -num -cookie $1
+		w3m -cookie -num $1
 }
 
 

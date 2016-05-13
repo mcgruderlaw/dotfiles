@@ -1,3 +1,231 @@
+<<<<<<< HEAD
+# Migrating from Kindle to iBooks
+Tags:
+# Migrating from Kindle to iBooks
+2011-10-13
+Converting your DRM-infested Kindle books to ePubs.
+
+.
+I started off reading eBooks from the Amazon Kindle store. As time has progressed, I’ve found myself using my physical Kindle less and less. Partly because I forget to charge it, and partly because I can never get the lighting in my favorite reading locations quite right. And at night? Forget about it.
+
+So I’ve converted all of my Kindle purchases to ePubs for use in iBooks. I could use the Kindle app for iOS but I’ve found iBooks to be faster at syncing read position, and it feels a lot more natural to use.
+
+Since I went through the effort of converting all of my Kindle documents, I figured I’d write a mini guide to getting it done. I’m specifically focusing on the Mac since that’s all I know; other users will have to venture elsewhere.
+
+## Setting up Calibre
+Calibre is a Java application which is an eBook management suite. It’s a bit ugly but it does what it says and works well. Since the Kindle’s eBooks are encrypted, we need to install a decryption plugin to do the heavy lifting there.
+
+1. Download and install
+[{Calibre}]({https://github.com/kovidgoyal/calibre/releases})
+.
+[{1}]({http://zacwe.st/blog/kindle-to-epub/#fn1})
+2. Download and decompress the
+[{DeDRM}]({https://apprenticealf.wordpress.com/})
+archive.
+3. Open Calibre’s preferences (
+<code style="margin:0px;padding:3px;font-size:12px;line-height:1em;white-space:pre-wrap;font-family:SourceCodePro-Regular, Menlo, Courier, monospace;border:1px solid rgb(233, 233, 233);border-radius:5px;color:rgb(31, 24, 0);background:rgb(243, 243, 243);">⌘,`).
+4. Go to “Plugins.”
+5. Click “Load plugin from file.”
+6. Choose the K4MobileDeDRM plugin’s zip file (zip within the main zip; don’t extract).
+
+The encryption used on Kindle books is fairly basic. The
+[{decryption key}]({https://en.wikipedia.org/wiki/Key_(cryptography)})
+is a product of the serial number for your device, so it’s not difficult to determine.
+
+## Getting books from Amazon
+The DeDRM scripts work by understanding
+[{Kindle for Mac}]({https://www.amazon.com/gp/kindle/mac})
+’s settings files, so to get the eBooks we need use the application. There are scripts to do conversions directly from Kindle hardware’s eBooks, but it’s more effort.
+
+1. Download
+[{Kindle for Mac}]({https://www.amazon.com/gp/kindle/mac})
+.
+2. Register it with your account.
+3. Download all of your eBooks (open them from the “Archived Items”).
+
+I really wish this application were retina.
+
+## Converting books to ePub format
+Kindle eBooks are in the
+[{MobiPocket}]({https://en.wikipedia.org/wiki/Mobipocket})
+format. However, iBooks requires
+[{ePub}]({https://en.wikipedia.org/wiki/EPUB})
+, so we need to both decrypt and convert the files. At this point, we’ve got all we need, so we can use Calibre to do the conversion.
+
+1. Navigate to either of the following (likely the second):
+* <code style="margin:0px;padding:3px;font-size:12px;line-height:1em;white-space:pre-wrap;font-family:SourceCodePro-Regular, Menlo, Courier, monospace;border:1px solid rgb(233, 233, 233);border-radius:5px;color:rgb(31, 24, 0);background:rgb(243, 243, 243);">~/Library/Application Support<span style="margin:0px;padding:0px;"/>/Kindle/My Kindle Content/`1. <code style="margin:0px;padding:3px;font-size:12px;line-height:1em;white-space:pre-wrap;font-family:SourceCodePro-Regular, Menlo, Courier, monospace;border:1px solid rgb(233, 233, 233);border-radius:5px;color:rgb(31, 24, 0);background:rgb(243, 243, 243);">~/Library/Application Support<span style="margin:0px;padding:0px;"/>/Kindle/My Kindle Content/`* <code style="margin:0px;padding:3px;font-size:12px;line-height:1em;white-space:pre-wrap;font-family:SourceCodePro-Regular, Menlo, Courier, monospace;border:1px solid rgb(233, 233, 233);border-radius:5px;color:rgb(31, 24, 0);background:rgb(243, 243, 243);">~/Library/Containers<span style="margin:0px;padding:0px;"/>/com.amazon.Kindle/<span style="margin:0px;padding:0px;"/>Data/Library<span style="margin:0px;padding:0px;"/>/Application Support/Kindle<span style="margin:0px;padding:0px;"/>/My Kindle Content/`2. <code style="margin:0px;padding:3px;font-size:12px;line-height:1em;white-space:pre-wrap;font-family:SourceCodePro-Regular, Menlo, Courier, monospace;border:1px solid rgb(233, 233, 233);border-radius:5px;color:rgb(31, 24, 0);background:rgb(243, 243, 243);">~/Library/Containers<span style="margin:0px;padding:0px;"/>/com.amazon.Kindle/<span style="margin:0px;padding:0px;"/>Data/Library<span style="margin:0px;padding:0px;"/>/Application Support/Kindle<span style="margin:0px;padding:0px;"/>/My Kindle Content/`
+3. Drag all of the
+<code style="margin:0px;padding:3px;font-size:12px;line-height:1em;white-space:pre-wrap;font-family:SourceCodePro-Regular, Menlo, Courier, monospace;border:1px solid rgb(233, 233, 233);border-radius:5px;color:rgb(31, 24, 0);background:rgb(243, 243, 243);">.azw`files into the Calibre window.
+4. Select the books in the Calibre window which you wish to export.
+5. Click the “Convert books” toolbar item.
+6. Choose “ePub” as the output format in the top-right of the convert window.
+7. Go to the “Page Setup” item in the left list, and configure the conversion:
+* Select “Kindle” as the input profile.
+1. Select “Kindle” as the input profile.
+* Select “iPad” as the output profile.
+2. Select “iPad” as the output profile.
+
+3. Hit the “OK” button to begin the conversion. It will take a while.
+
+If you have any issues at the decryption step, you should delete your
+<code style="margin:0px;padding:3px;font-size:12px;line-height:1em;white-space:pre-wrap;font-family:SourceCodePro-Regular, Menlo, Courier, monospace;border:1px solid rgb(233, 233, 233);border-radius:5px;color:rgb(31, 24, 0);background:rgb(243, 243, 243);">~/Library/Application Support/Kindle`folder and start again.
+
+## Exporting and enjoyment
+You can now “Save to disk” from the toolbar item to save the books which you’ve converted, and import them into iTunes for use in iBooks. Calibre is powerful enough to do many other formats if you want to use other devices as well.
+
+Remember, don’t post any of the unencrypted documents anywhere. Just because the DRM is gone doesn’t mean you’re legally authorized to do so. They’re for your personal use only.
+
+1. This is a link to the project’s GitHub page because their main website does not support HTTPS. You should not install software over an unencrypted connection.
+[{↩}]({http://zacwe.st/blog/kindle-to-epub/#fnref1})
+
+||||||| merged common ancestors
+# My Workflow
+Tags:.Professional Development
+## VBoxManage
+* VBoxManage startvm MediaVM -type headless
+* VBoxManage controlvm MediaVM poweroff
+* VBoxManage showvminfo WebVM | less
+* rdesktop -a 16 -N 192.168.2.2:3066 or 3038
+
+## Convert jpg to pdf
+    * convert x.jpg y.pdf
+
+## Play video or audio from server on laptop
+    * sshfs dmc@192.168.2.2:/data/Media /home/mcgruderlaw/Downloads/tmp/ -p 39966
+    * mplayer ~/Downloads/tmp/Movies/. . .
+    * fusermount -u [mountpoint] to unmount
+
+## Life on the Command Line
+    * Alt-Ctl F2 for tty2, etc.
+    * Ctrl-z to push jobs to background
+    * jobs to list jobs by job #
+    * fg # to bring what I need to foreground
+    * fbgs or pdftohtml to view pdfs in framebuffer
+    * use ConqueTerm to stay in vim
+    * w3m, mutt, vimpc, td, canto
+    * Take notes in vim when reading
+
+## AUR Package Management
+    * cower -s [pkg]
+    * cower -d [pkg]
+    * makepkg -si
+    * cower -u
+    * cower -ud
+    * find . -name PKGBUILD -execdir makepkg -si \;
+    * delete directories
+    * OR download the tarball from AUR
+    * tar xzvf [tarball]
+    * cd to dir with PKGBUILD
+    * makepkg -si
+
+## Mutt
+    * Ctrl b to follow links, then colon to activate, then tab to jump to different links
+
+## Use Tmux
+    * Work tasks in one window
+    * Music, Torrents, Mail, Canto, Lftp, . . . in others
+
+## SSH
+    * ssh -L 12345:localhost:80 root@23.124.50.217 -p 39966
+
+## Use Vim
+    * Load arg list: vim `find . -name \\*.tex -print`
+    * Load arg list in vim: `arga **/*.tex`
+    * Evervim in first tab
+    * Each file/project gets a tab
+      -Cornell Notes for studying books and videos; Feynman method
+    * Version control with git
+        -New branches for each piece of a project, i.e. Facts, Argument
+    * Madman mindmap to Carpenter outline in Markdown (write script)
+    * Case Brief form on p 26 of The Winning Case Brief
+        -CaseBrief from UltiSnips
+    * Topic charts, CX charts using snipits;
+        - Script for pulling mindmap items into outline
+    * Convert to latex at/near final draft with pandoc
+    * Spell check in vim: !aspell check %
+    * Run scripts: :call scriptname()
+    * Soft-wrap a paragraph: vipJ
+    * ''+ is X server copy/paste register
+    * ''0 is yank register
+
+## Git with Dropbox
+    * Create repo folder in ~/Documents/ofc/Cases
+    * cd ~/path/to/new-project
+    * git init
+    * cp ~/.gitignore .
+    * touch README, or echo ... > README
+    * cp litfile
+    * cp Preparation System
+    * git add ., or Gwrite
+    * git commit -m \''Initial Commit''
+    * git init --bare ~/Dropbox/git/new-project.git
+    * git remote add dropbox
+      ~/Dropbox/git/new-project.git
+    * git push -u dropbox master
+    * Load arg list: vim `find . -name \\*.tex -print`
+    * Fill in casevar.sty
+    * trial notebook
+
+## Git Workflow
+    * :Git branch [new project]
+    * :Git checkout [project branch];
+    * :Gwrite to stage
+    * :Gcommit; Shift-c
+    * :Gmove target_path for Git mv % target_path
+    * :Gremove for Git rm %
+    * don't forget to push commits to remote
+
+## Wine
+    * wine ~/.wine/drive_c/Program Files/TransMedia
+
+## Make three copies of case documents
+    * Combine all documents into one
+        -copy ~/Documents/ofc/pdfcombine.tex to directory
+        -compile pdfcombine.tex
+    * Bates number
+        -Plug file name into line 15 of pdfnumber.tex and compile
+    * Create document schedule
+
+## Convert Word files to Latex
+    * Use libreoffice --headless --convert-to
+    * Use catdoc
+    * Use xsl2csv for excel docs
+
+## Archive Old Case Files
+    * email Dropbox file contents to Evernote
+        - Subject in Client's Name
+    * Delete Dropbox Folder
+
+## Weekly Case Review
+    * Create case list with classification in Rocketmatter
+    * Review and edit list each week
+
+## Scan Documents for Evernote and Destroy
+## Opening and Closing
+    * Make a latex mindmap for the opening and closing forms
+
+## At Command
+    * Get job number, then quit: ps aux | grep mplayer; kill [job]
+
+## youtube-dl
+    * Copy url
+    * Go to a download directory
+    * youtube-dl ''[paste url]''
+    * List available formats: youtube-dl -F ''[paste url]''
+    * Audio only + Video only: youtube-dl -f 244+171 ''[paste url]''
+    * Stream video: mplayer $(youtube-dl -g ''[paste url]'')
+    * Stream video: mplayer -cookies -cookies-file /tmp/cookie.txt $(youtube-dl -g --cookies /tmp/cookie.txt -f [#] ''[paste url]'')
+    * -g gives long link
+    * yt2mp3 ''[paste url]''
+
+## Virtualbox Sharing
+    * sudo mount -t vboxsf [alias of shared host folder] [directory in box]
+
+## Bates Numbering on PDFs
+    * Assemble from one dir above; find dir/ -name ''\*.pdf'' -exec cp {} dest/ \;
+    
+    * Pdfnum script in pdf's directory
+=======
 # My Workflow
 Tags:.Professional Development
 Notebook:My Notes
@@ -192,4 +420,5 @@ dmc@23.124.50.217:/data/Documents/Cases
     * Assemble from one dir above; find dir/ -name ''\*.pdf'' -exec cp {} dest/ \;
     
     * Pdfnum script in pdf's directory
+>>>>>>> d5bfd6cc6abe084da7f09d9105a6da502a360675
 

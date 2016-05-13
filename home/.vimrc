@@ -56,6 +56,7 @@ Plugin 'tpope/vim-vinegar'
 " Plugin 'themoken/canto-curses'
 " Plugin 'vim-scripts/Command-T'
 Plugin 'maciakl/vim-neatstatus.git'
+Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()
 
