@@ -537,7 +537,7 @@ command! Prose inoremap <buffer> . .<C-G>u|
             \ inoremap <buffer> ! !<C-G>u|
             \ inoremap <buffer> ? ?<C-G>u|
             \ setlocal spell spelllang=en_us
-            \     nolist nowrap tw=74 fo=t1 nonu|
+            \     nolist wrap tw=0 lbr wm=0 fo=t1|
             \ augroup PROSE|
             \   autocmd InsertEnter <buffer> set fo+=a|
             \   autocmd InsertLeave <buffer> set fo-=a|
@@ -549,6 +549,8 @@ command! Code silent! iunmap <buffer> .|
             \ setlocal nospell list nowrap
             \     tw=74 fo=cqrl showbreak=… nu|
             \ silent! autocmd! PROSE * <buffer>
+
+            "\     nolist nowrap tw=74 fo=t1 nonu|
 
 " open with locate or find command
 " tutorial video: https://www.youtube.com/watch?v=X0KPl5O006M

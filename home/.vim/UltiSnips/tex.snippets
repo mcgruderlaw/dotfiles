@@ -1,3 +1,11 @@
+snippet center "Centered Block"
+\begin{tightcenter}
+
+\textbf{$0}
+
+\end{tightcenter}
+endsnippet
+
 snippet enum "enumerate block"
 \begin{enumerate}
 
@@ -55,6 +63,89 @@ snippet mmap "Mind Map"
 		\item 
 
 \end{enumerate}
+
+\end{document}
+
+endsnippet
+
+snippet envelope "Normal Envelope"
+
+% envelope.tex
+\documentclass{letter}
+\usepackage[left=0.50in,top=0.15in,papersize={4.125in,9.5in},landscape,twoside=false]{geometry}
+\setlength\parskip{0pt}
+\pagestyle{empty}
+
+\begin{document}
+
+David E. McGruder\\
+Parker McGruder \& Associates, PC\\
+44060 Woodward Avenue, Suite 200\\
+Bloomfield Hills, Michigan 48302\\
+
+\vspace{1.0in}\large
+\setlength\parindent{3.6in}
+
+$1
+
+$2
+
+$3
+
+$4
+
+\end{document}
+
+endsnippet
+
+
+
+snippet letter "Normal Letter"
+
+
+\documentclass[12pt]{article}
+\usepackage{wallpaper}
+\CenterWallPaper{1.04}{bkgd.pdf}
+    \usepackage{geometry}
+            \newgeometry{top=2.8in, bottom=1.5in, left=1in, right=1.0in}
+    \newcommand{\tab}{\hspace*{.15in}}
+    \setlength\parindent{0pt}
+    \pagenumbering{gobble}
+\begin{document}
+
+%\vspace*{1.2in}
+
+\today
+
+\textbf{Sent via email to $1} \\
+
+$2 $3, Esq. \\\\
+$4 \\\\
+$5 \\\\
+$6 \\\\
+$7 \\\\
+
+Re: \tab $8 \\\\
+\tab\tab Case No. $9 \\\\
+
+Dear M$10 $3: \\\\
+
+$0 \\\\
+
+%\newgeometry{top=1.0in, bottom=1.5in, left=1in, right=1.0in}
+%\pagestyle{headings}
+%\markright{William M Hatchett, Esq.\hfill Page Two\hfill May 18, 2016}
+
+%\ClearWallPapaer
+
+Sincerely, \\
+
+\vspace{.4in}
+
+H. Wallace Parker, \\
+Attorney at Law \\
+
+cc: $11
 
 \end{document}
 
