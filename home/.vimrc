@@ -708,6 +708,9 @@ import shutil
 shutil.copytree('/home/dmc/Documents/ofc/capdocs5/Motions', 'newdoc')
 
 endPython
+
+execute "args " . **/*.tex
+
 endfunction
 
 function! FeynmanNote()

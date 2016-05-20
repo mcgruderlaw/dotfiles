@@ -5,7 +5,8 @@ Xft.dpi:                   102
 xterm*VT100.geometry:       80x25
 XTerm*background:           #000000
 !XTerm*background:           #FFFFCC
-XTerm*foreground:           #767676
+XTerm*foreground:           #008700
+!XTerm*foreground:           #767676
 !XTerm*foreground:           #bcbcbc
 !XTerm*foreground:           #000000
 XTerm*locale:               true
