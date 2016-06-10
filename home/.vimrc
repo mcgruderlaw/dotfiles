@@ -156,6 +156,10 @@ nnoremap <silent> <leader>etl :<C-u>EvervimSearchByQuery<SPACE>tag:4-Later -tag:
 let g:evervim_usermarkdown='1'
 
 "open-browswer
+let g:openbrowser_default_search = "duckduckgo"
+let g:openbrowser_search_engines = {
+	  \    'favorite': 'http://duckduckgo.com/?q={query}'
+	  \}
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 let g:netrw_banner = 1 
 let g:netrw_localcopycmd ="cp"
