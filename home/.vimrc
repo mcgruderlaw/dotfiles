@@ -22,7 +22,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'astrumas/evervim'
 Plugin 'VitaliyRodnenko/geeknote'
 Plugin 'vim-scripts/ScrollColors'
-" Plugin 'yuratomo/w3m.vim'
+Plugin 'yuratomo/w3m.vim'
 " Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vimoutliner/vimoutliner'
@@ -140,8 +140,9 @@ if version >= 700
   hi SpellLocal  cterm=None
 endif
 
-let g:evervim_devtoken='S=s51:U=53464f:E=1552bf1b269:C=14dd4408620:P=1cd:A=en-devtoken:V=2:H=b8c9e5a1c33575b292641e6ca5b1ce8e'
 " Evervim
+"let g:evervim_devtoken set in ~/.vim/evervim/evervim.vim for security
+source ~/.vim/evervim/evervim.vim
 nnoremap <silent> <leader>el :<C-u>EvervimNotebookList<CR>
 nnoremap <silent> <leader>eT :<C-u>EvervimListTags<CR>
 nnoremap <silent> <leader>en :<C-u>EvervimCreateNote<CR>
@@ -542,10 +543,11 @@ command! Prose inoremap <buffer> . .<C-G>u|
             \ inoremap <buffer> ? ?<C-G>u|
             \ setlocal spell spelllang=en_us
             \     nolist wrap tw=0 lbr wm=0|
-            \ augroup PROSE|
-            \   autocmd InsertEnter <buffer> set fo+=a|
-            \   autocmd InsertLeave <buffer> set fo-=a|
-            \ augroup END
+
+"            \ augroup PROSE|
+"            \   autocmd InsertEnter <buffer> set fo+=a|
+"            \   autocmd InsertLeave <buffer> set fo-=a|
+"            \ augroup END
 
 command! Code silent! iunmap <buffer> .|
             \ silent! iunmap <buffer> !|
