@@ -182,11 +182,11 @@ nmap br <Plug>(openbrowser-smart-search)
 vmap br <Plug>(openbrowser-smart-search)
 
 "For Statusline
-set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
-set termencoding=utf-8
+"set encoding=utf-8
+"set t_Co=256
+"set fillchars+=stl:\ ,stlnc:\
+"set term=xterm-256color
+"set termencoding=utf-8
 function! AirlineThemePatch(palette)
           let a:palette.accents.bold_yellow = [ '#ffffff', '', 0, '', 'bold' ]
 endfunction
@@ -282,11 +282,19 @@ set softtabstop=4   " number of spaces in tab when editing
 "set expandtab       " tabs are spaces
 "set <C-v><Tab>      " for Tab character
 
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
  
-set background=dark
-
-colorscheme hipster
+set background=light
+"g:solarized_termcolors= 16
+"g:solarized_termtrans = 1
+"g:solarized_degrade = 0 | 1 
+"g:solarized_bold = 1 | 0 
+"g:solarized_underline = 1 | 0 
+"g:solarized_italic = 1 | 0 
+"g:solarized_contrast = "normal"| "high" or "low"
+"g:solarized_visibility= "normal"| "high" or "low"
+call togglebg#map("<F8>")
+colorscheme solarized
 "LuciusDarkHighContrast
 
 "solarized hemisu noctu hipster lucius skittles_dark elflord badwolf starbucks molokai Tomorrow
@@ -299,9 +307,11 @@ colorscheme hipster
 nnoremap <F4> :GundoToggle<CR>
 
 "YouCompleteMe Settings
-let g:ycm_server_python_interpreter = ''
+"let g:ycm_server_python_interpreter = 'python3'
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_complete_in_comments = 1
 let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
+let g:ycm_server_log_level = 'info'
 
 "UltiSnips Settings
 function! g:UltiSnips_Complete()

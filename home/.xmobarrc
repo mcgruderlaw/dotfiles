@@ -2,7 +2,7 @@ Config {
 
    -- appearance
      font =         "xft:Inconsolata:size=8:antialias=true"
-   , bgColor =      "black"
+   , bgColor =      "#002b36"
    , fgColor =      "#646464"
    , position =     Top
    , border =       BottomB
