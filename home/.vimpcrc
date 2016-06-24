@@ -14,7 +14,7 @@ set sortignorecase
 set playlists = all
 "set mouse
 set songformat {%a - %b - %t}|{%f}$E$R $H[$H%l$H]$H
-set local-music-dir /home/dmc/Music1/
+set local-music-dir /home/dmc/Music/
 " set songformat {%?}|{%f}$E$R $H[$H%l$H]$H
 " set songformat {{%?}|{%?}}|{%f}$E$R $H[$H%l$H]$H
 

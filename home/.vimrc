@@ -298,6 +298,12 @@ colorscheme hipster
 
 nnoremap <F4> :GundoToggle<CR>
 
+"YouCompleteMe Settings
+let g:ycm_server_python_interpreter = ''
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
+"UltiSnips Settings
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippet()
     if g:ulti_expand_res == 0
@@ -363,7 +369,7 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
-set hlsearch
+set nohlsearch
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>

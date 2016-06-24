@@ -13,6 +13,7 @@ export LANG=en_US.UTF-8
 export TERM=xterm-256color
 export TERM=xterm-256color
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" 
+export CASES="/home/dmc/Documents/ofc/Cases/"
 
 unset PROMPT_COMMAND
 
