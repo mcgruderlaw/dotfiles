@@ -285,7 +285,7 @@ set softtabstop=4   " number of spaces in tab when editing
 "let g:solarized_termcolors=256
  
 set background=light
-"g:solarized_termcolors= 16
+"g:solarized_termcolors = 16
 "g:solarized_termtrans = 1
 "g:solarized_degrade = 0 | 1 
 "g:solarized_bold = 1 | 0 
