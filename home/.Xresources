@@ -1,4 +1,4 @@
-xterm*faceName: Terminus:size=13:antialias=on
+xterm*faceName: Terminus:size=11:antialias=on
 
 #define S_base03        #002b36
 #define S_base02        #073642
