@@ -1,4 +1,4 @@
-xterm*faceName: Terminus:size=11:antialias=on
+xterm*faceName: xft:monofur:size=10:antialias=on
 xterm*termName: xterm-256color
 
 #define S_base03        #002b36
