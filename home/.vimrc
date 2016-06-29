@@ -57,6 +57,7 @@ Plugin 'tpope/vim-vinegar'
 " Plugin 'vim-scripts/Command-T'
 Plugin 'maciakl/vim-neatstatus.git'
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'chrisbra/unicode.vim'
 
 call vundle#end()
 
@@ -243,8 +244,7 @@ set number
 
 set laststatus=2
 set list
-"set listchars=tab:▸\ ,eol:¬
-set listchars=eol:¬
+set listchars=tab:▸\ ,eol:¬
 "set listchars=eol:$
 set showcmd
 "set splitbelow
