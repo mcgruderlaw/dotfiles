@@ -58,6 +58,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'maciakl/vim-neatstatus.git'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'chrisbra/unicode.vim'
+Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
 
 call vundle#end()
 
@@ -92,6 +93,16 @@ set incsearch
 set complete=.,k,w,b,u,t,i
 set omnifunc=syntaxcomplete#Complete
 
+" Syntastic Settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_tex_checkers = ["lacheck", "chktex", "proselint"]
 if &term =~ '256color'
 " Disable Background Color Erase (BCE) so that color schemes
 " work properly when Vim is used inside tmux and GNU screen.
