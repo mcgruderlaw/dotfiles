@@ -2,12 +2,12 @@
 
 set spoolfile = "+Personal/INBOX"
 
-source ~/.mutt/accounts/personal
+source ~/.mutt/accounts/Personal
 #source ~/.mutt/colorlight
 
-folder-hook Personal/* source ~/.mutt/accounts/personal
-folder-hook Work/*     source ~/.mutt/accounts/work
-folder-hook Firm/*     source ~/.mutt/accounts/firm
+folder-hook Personal/* source ~/.mutt/accounts/Personal
+folder-hook Work/*     source ~/.mutt/accounts/Work
+folder-hook Firm/*     source ~/.mutt/accounts/Firm
 #folder-hook 'account.com.yahoo.mcgruderlaw'     'source ~/.mutt/accounts/account.com.yahoo.mcgruderlaw'
 
 mailboxes =Personal/INBOX =Work/INBOX =Firm/INBOX =Gmail/[Gmail].All\ Mail/ # =att
@@ -27,23 +27,25 @@ macro index,pager \cb ": unset wait_key; set pipe_decode\n|w3m\n: set wait_key; 
 
 bind attach <return>     view-mailcap
 
+source mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+
 # Palette for use with the Linux console.  Black background.
 
 
-color header cyan default .
-color header yellow default ^From
-color header yellow default ^Subject
-color body yellow default [_a-z\.\$A-Z0-9-]+@[a-zA-Z0-9\./\-]+
-color body yellow default (http|ftp)://[_a-zA-Z0-9\?\=\&\@\%\#\:\,\./~\-]+
-color quoted green black
-color signature cyan black
-color attachment yellow default
-color tree white default
-color indicator black cyan
-color status yellow blue
-color tilde blue default
-color normal white default
-color index green default ~N
+#color header cyan default .
+#color header yellow default ^From
+#color header yellow default ^Subject
+#color body yellow default [_a-z\.\$A-Z0-9-]+@[a-zA-Z0-9\./\-]+
+#color body yellow default (http|ftp)://[_a-zA-Z0-9\?\=\&\@\%\#\:\,\./~\-]+
+#color quoted green black
+#color signature cyan black
+#color attachment yellow default
+#color tree white default
+#color indicator black cyan
+#color status yellow blue
+#color tilde blue default
+#color normal white default
+#color index green default ~N
 
 
 
