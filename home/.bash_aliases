@@ -106,7 +106,7 @@ Jobs="\j"
 #  echo "\u@\H '$Cyan$PathFull$Color_Off''$Red':'$Color_Off' "; \
 #fi)'
 
-export PS1='$(git branch &>/dev/null;\
+export PS1="<\u@\h> "'$(git branch &>/dev/null;\
 if [ $? -eq 0 ]; then \
   echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
