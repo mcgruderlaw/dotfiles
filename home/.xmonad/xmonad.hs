@@ -45,7 +45,7 @@ myConfig = defaultConfig
 	}
 
 myBorderWidth   = 4
-myFocusedBorderColor    = "#dc332f"
+myFocusedBorderColor    = "#dc322f"
 -- myFocusedBorderColor    = "#005f00"
 -- myFocusedBorderColor    = "#ff0000"
 -- myFocusedBorderColor    = "#222200"
