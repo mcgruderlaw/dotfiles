@@ -284,8 +284,8 @@ set hidden
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
 set ruler
 
-" set tags=./tags;
-" let g:easytags_dynamic_files = 1
+set tags=./tags;
+let g:easytags_dynamic_files = 1
 
 set autochdir
 " let NERDTreeChDirMode=2
