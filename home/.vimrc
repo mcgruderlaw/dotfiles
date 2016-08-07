@@ -55,7 +55,7 @@ Plugin 'tpope/vim-vinegar'
 " Plugin 'honza/vim-snippets'
 " Plugin 'themoken/canto-curses'
 " Plugin 'vim-scripts/Command-T'
-Plugin 'maciakl/vim-neatstatus.git'
+" Plugin 'maciakl/vim-neatstatus.git'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'chrisbra/unicode.vim'
 Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
@@ -419,7 +419,8 @@ let g:pymode_options = 1
 let g:pymode_quickfix_minheight = 3
 let g:pymode_quickfix_maxheight = 6
 let g:pymode_python = 'python'
-let g:pymode_indent = []
+"let g:pymode_indent = []
+let g:pymode_indent = 1
 let g:pymode_folding = 1
 let g:pymode_motion = 1
 let g:pymode_doc = 1
