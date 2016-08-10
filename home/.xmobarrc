@@ -1,110 +1,23 @@
-Config { 
+Config { font = "xft:Inconsolata:size=12,xft:Monospace"
+    , bgColor = "#101010"
+    , fgColor = "#a8a8a8"
+    , position = Top
+    , lowerOnStart = True
+    , sepChar = "%"
+    , alignSep = "}{"
+--    , template = "%StdinReader% }{ %mpd% | %mail% %battery% %multicpu% %memory% %disku% | %wlan0%%eth0% | %date% "
+    , template = "%StdinReader% }{ %mpd% | %battery% %multicpu% %memory% %disku% | %enp4s0% | %date% "
+    , commands = [ Run Network "enp4s0" ["-t", "<fc=#556B2F><rx> ↓</fc> <fc=#B22222><tx> ↑</fc>","-S","True"] 10
+                 , Run Network "wlan0" ["-t", "<fc=#556B2F><rx> ↓</fc> <fc=#B22222><tx> ↑</fc>","-S","True"] 10
+                 , Run MultiCpu ["-t", "C: <total>%", "-H","50","--high","#B22222"] 10
+                 , Run Memory ["-t","M: <usedratio>%","-H","80","--high","#B22222"] 10
+                 , Run DiskU [("/", "D:<usedp>%"), ("sda1", "<usedbar>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "3"] 20
+                 , Run Date "<fc=#ffffff>%a %m/%d %I:%M %P</fc>" "date" 10
+                 , Run MPD ["-t", "<artist> - <fc=#ffffff><title></fc> (<album>) <statei>", "--", "-P", ">>", "-Z", "=", "-S", "><"] 10
+                 , Run Mail [("E: ", "~/.mail/INBOX")] "mail"
+                 , Run BatteryP ["BAT0"] ["-t", "B: <left>%", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=green>On</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "red", "-m", "blue", "-h", "green"] 600
+                 , Run StdinReader
+                 ]
+}
 
-   -- appearance
-     font =         "xft:monofur:size=9:antialias=true"
-   , bgColor =      "#fdf6e3"
-   , fgColor =      "#646464"
-   , position =     Top
-   , border =       BottomB
-   , borderColor =  "#646464"
-
-   -- layout
-   , sepChar =  "%"   -- delineator between plugin names and straight text
-   , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% | %battery% | %multicpu% | %coretemp% | %memory%
-| %dynnetwork% }{ %KPTK% | %date% || %kbd% "
-
-   -- general behavior
-   , lowerOnStart =     True    -- send to bottom of window stack on start
-   , hideOnStart =      False   -- start with window unmapped (hidden)
-   , allDesktops =      True    -- show on all desktops
-   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
-   , pickBroadest =     True    -- choose widest display (multi-monitor)
-   , persistent =       False    -- enable/disable hiding (True = disabled)
-
-   -- plugins
-   --   Numbers can be automatically colored according to their value. xmobar
-   --   decides color based on a three-tier/two-cutoff system, controlled by
-   --   command options:
-   --     --Low sets the low cutoff
-   --     --High sets the high cutoff
-   --
-   --     --low sets the color below --Low cutoff
-   --     --normal sets the color between --Low and --High cutoffs
-   --     --High sets the color above --High cutoff
-   --
-   --   The --template option controls how the plugin is displayed. Text
-   --   color can be set by enclosing in <fc></fc> tags. For more details
-   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins.
-   , commands = 
-
-        -- StdinReader
-        [ Run StdinReader
-
-        -- weather monitor
-        , Run Weather "KPTK" [ "--template", "<skyCondition> | <fc=#4682B4><tempF></fc>°F | <fc=#4682B4><dewPointF></fc>°F | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"
-                             ] 200
-
-        -- network activity monitor (dynamic interface resolution)
-        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"
-                             , "--Low"      , "30000"       -- units: kB/s
-                             , "--High"     , "70000"       -- units: kB/s
-                             , "--low"      , "darkgreen"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkred"
-                             ] 10
-
-        -- cpu activity monitor
-        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"
-                             , "--Low"      , "50"         -- units: %
-                             , "--High"     , "85"         -- units: %
-                             , "--low"      , "darkgreen"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkred"
-                             ] 10
-
-        -- cpu core temperature monitor
-        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"
-                             , "--Low"      , "70"        -- units: °C
-                             , "--High"     , "80"        -- units: °C
-                             , "--low"      , "darkgreen"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkred"
-                             ] 50
-                          
-        -- memory usage monitor
-        , Run Memory         [ "--template" ,"Mem: <usedratio>%"
-                             , "--Low"      , "20"        -- units: %
-                             , "--High"     , "90"        -- units: %
-                             , "--low"      , "darkgreen"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkred"
-                             ] 10
-
-        -- battery monitor
-        , Run Battery        [ "--template" , "Batt: <acstatus>"
-                             , "--Low"      , "10"        -- units: %
-                             , "--High"     , "80"        -- units: %
-                             , "--low"      , "darkred"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkgreen"
-
-                             , "--" -- battery specific options
-                                       -- discharging status
-                                       , "-o"   , "<left>% (<timeleft>)"
-                                       -- AC "on" status
-                                       , "-O"   , "<fc=#dAA520>Charging</fc>"
-                                       -- charged status
-                                       , "-i"   , "<fc=#006000>Charged</fc>"
-                             ] 50
-
-        -- time and date indicator 
-        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
-        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
-
-        -- keyboard layout indicator
-        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")
-                             , ("us"         , "<fc=#8B0000>US</fc>")
-                             ]
-        ]
-   }
+-- vim: ft=haskell
