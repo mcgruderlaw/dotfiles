@@ -42,7 +42,7 @@ myConfig = defaultConfig
 --    , handleEventHook   = myEventHook
 --    , logHook           = myLogHook
     , startupHook       = myStartupHook
-	}
+}
 
 myBorderWidth   = 4
 myFocusedBorderColor    = "#dc322f"
