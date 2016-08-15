@@ -21,7 +21,7 @@ export GIT_COMMITTER_NAME="David E. McGruder"
 PS1='[\u@\h \W]\$ '
 complete -cf sudo
 complete -cf man
-[ -n "$XTERM_VERSION" ] # && transset-df -a >/dev/null
+[ -n "$XTERM_VERSION" ]  && transset-df --id "$WINDOWID" >/dev/null
 
 #alsi archey3
 
