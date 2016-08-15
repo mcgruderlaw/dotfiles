@@ -56,10 +56,11 @@ myNormalBorderColor     = "#000000"
 myModMask       = mod4Mask
 myTerminal      = "xterm"
 -- myWorkspaces = [ "Web", "Evernote", "Drafting", "Shell", "Mail", "Music", "IRC", "News", "Transmission", "Misc."]
-myWorkspaces = [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+myWorkspaces = [ "Web", "Drafting", "Shell1", "Shell2", "Mail", "Music", "IRC", "News", "Misc."]
+-- myWorkspaces = [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 myManageHook = composeAll
-     [ className =? "Firefox" --> doShift "1"
+     [ className =? "Firefox" --> doShift "Web"
      , className =? "MPlayer" --> doFloat
      ]
 
@@ -108,11 +109,11 @@ nobordersLayout = smartBorders $ Full
 myStartupHook :: X ()
 myStartupHook = do
     ewmhDesktopsStartup
-    spawnOn "1" "firefox"
-  -- spawnOn "Drafting" "xterm"
-  -- spawnOn "Shell" "xterm"
-  -- spawnOn "Mail" "vimpc"
-  -- spawnOn "Music" "mutt"
+    spawnOn "Web" "firefox"
+    --spawnOn "Drafting" "xterm"
+    --spawnOn "Shell1" "xterm"
+    --spawnOn "Mail" "mutt"
+    --spawnOn "Music" "vimpc"
 
 -- toggle the status bar gap
 --[
@@ -121,5 +122,5 @@ myStartupHook = do
 --]
 
 myLogHook = fadeInactiveLogHook fadeAmount
-    where fadeAmount = 0.75
+    where fadeAmount = 0.85
 
