@@ -55,7 +55,7 @@ Plugin 'tpope/vim-vinegar'
 " Plugin 'honza/vim-snippets'
 " Plugin 'themoken/canto-curses'
 " Plugin 'vim-scripts/Command-T'
-" Plugin 'maciakl/vim-neatstatus.git'
+Plugin 'maciakl/vim-neatstatus.git'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'chrisbra/unicode.vim'
 Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
