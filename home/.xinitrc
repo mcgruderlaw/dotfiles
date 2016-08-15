@@ -20,9 +20,10 @@ fi
 
 unclutter -grab &
 
-xcompmgr -cCfF -r7 -o 0.95 -l-10 -t-8 -D7 &
+xcompmgr -cCfF -r7 -o 0.25 -l-10 -t-8 -D7 &
+#devilspie -a &
 
-canto-fetch -db
+# canto-fetch -db
 
 # dropboxd
 
