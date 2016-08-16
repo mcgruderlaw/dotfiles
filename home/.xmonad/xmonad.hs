@@ -47,7 +47,7 @@ myConfig = defaultConfig
     , logHook           = myLogHook
 } `additionalKeys` [ (( mod4Mask, xK_f), spawn "firefox") ]
 
-myBorderWidth   = 1
+myBorderWidth   = 0
 myFocusedBorderColor    = "#dc322f"
 -- myFocusedBorderColor    = "#005f00"
 -- myFocusedBorderColor    = "#ff0000"
