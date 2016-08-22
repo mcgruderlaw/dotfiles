@@ -50,7 +50,7 @@ myConfig = defaultConfig
     {- ... -}
 } `additionalKeys` [ (( mod4Mask, xK_f), spawn "firefox") ]
 
-myBorderWidth   = 2
+myBorderWidth   = 0
 myFocusedBorderColor    = "#dc322f"
 -- myFocusedBorderColor    = "#005f00"
 -- myFocusedBorderColor    = "#ff0000"
@@ -69,7 +69,7 @@ myManageHook = composeAll
 
 -- myEventHook = fadeWindowsEventHook {- ... -}
 
-myFadeHook = composeAll [isUnfocused --> transparency 0.20
+myFadeHook = composeAll [isUnfocused --> transparency 0.24
                         --,                opaque
                         ]
 
