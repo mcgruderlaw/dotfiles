@@ -129,6 +129,7 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>
 "cnoremap sudow :w !sudo tee % >/dev/null
+nnoremap <leader>sq "qy:call ExecuteSQL()<CR>
 nnoremap <leader>ss :w !sudo tee % >/dev/null<cr>
 nnoremap <leader>s <esc>:w<cr>
 inoremap <leader>s <esc>:w<cr>
@@ -607,12 +608,14 @@ map <leader>mp :exec '!mplayer ' . shellescape(getline('.')) <CR><CR>
 " stream justin tv ..etc
 map <leader>ls :exec '!livestreamer -p mplayer ' . shellescape(getline('.')) . 'best' <CR><CR>
 
-" watch streaming porn
+" watch streaming videos
 map <leader>p :exec '!mplayer $(youtube-dl -g ' . shellescape(getline('.')) . ')' <CR><CR>
 
 " download videos/files
 map <leader>yt :exec '!cd ~/Downloads; youtube-dl ' . shellescape(getline('.')) <CR><CR>
 map <leader>wg :exec '!cd ~/Downloads; wget -c ' . shellescape(getline('.')) <CR><CR>
+
+source /home/dmc/scripts/executesql.vim
 
 iabbr Email parkermcgruderlaw@gmail.com
 iabbr dem David E. McGruder
