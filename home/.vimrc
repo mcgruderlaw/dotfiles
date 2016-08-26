@@ -143,13 +143,13 @@ nnoremap <leader>sp :!aspell check %<CR>
 nnoremap <leader>ca :cd $HOME/Documents/ofc/Cases/
 nnoremap / /\v
 "Sentence Junctions
-nnoremap gc. r.wvUb
-nnoremap gc, r,wvub
-nnoremap gc; r;wvub
-nnoremap gc- s -<esc>wvub
-xnoremap gc. s.<esc>wvUb
-xnoremap gc, s,<esc>wvub
-xnoremap gc; s;<esc>wvub
+nnoremap fc. r.wvUb
+nnoremap fc, r,wvub
+nnoremap fc; r;wvub
+nnoremap fc- s -<esc>wvub
+xnoremap fc. s.<esc>wvUb
+xnoremap fc, s,<esc>wvub
+xnoremap fc; s;<esc>wvub
 
 " Spell checking  ---
 if version >= 700
