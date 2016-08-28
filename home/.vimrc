@@ -55,7 +55,7 @@ Plugin 'tpope/vim-vinegar'
 " Plugin 'honza/vim-snippets'
 " Plugin 'themoken/canto-curses'
 " Plugin 'vim-scripts/Command-T'
-Plugin 'maciakl/vim-neatstatus.git'
+" Plugin 'maciakl/vim-neatstatus.git'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'chrisbra/unicode.vim'
 Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
@@ -615,7 +615,7 @@ map <leader>p :exec '!mplayer $(youtube-dl -g ' . shellescape(getline('.')) . ')
 map <leader>yt :exec '!cd ~/Downloads; youtube-dl ' . shellescape(getline('.')) <CR><CR>
 map <leader>wg :exec '!cd ~/Downloads; wget -c ' . shellescape(getline('.')) <CR><CR>
 
-source /home/dmc/scripts/executesql.vim
+" source /home/dmc/scripts/executesql.vim
 
 iabbr Email parkermcgruderlaw@gmail.com
 iabbr dem David E. McGruder
