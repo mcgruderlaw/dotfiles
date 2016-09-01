@@ -10,6 +10,7 @@
 
 export EDITOR="vim"
 export BROWSER="firefox"
+export BROWSERCLI="w3m"
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignoredups"
 # export PAGER=/usr/local/bin/vimpager
