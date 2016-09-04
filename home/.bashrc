@@ -169,6 +169,12 @@ mplayer -loop 10 /usr/lib/libreoffice/share/gallery/sounds/gong.wav
 EOF
 }
 
+xcompmgr_restart() {
+  killall xcompmgr
+  sleep 1
+  xcompmgr -r7 -o 0.25 -l-10 -t-8 -D7 &
+}
+
 w3c() {
 		w3m -cookie -num $1
 }

@@ -66,6 +66,7 @@ filetype plugin indent on
 syntax on
 
 let mapleader = ","
+let maplocalleader = "\\"
 
 set cursorline          " highlight current line
 " set statusline+=%F
@@ -252,10 +253,12 @@ let g:Tex_ViewRule_pdf = 'zathura'
 let g:Tex_GotoError = 1
 
 let g:pandoc#command#autoexec_on_writes = 1
-let g:pandoc#command#autoexec_command = "Pandoc! pdf"
-let g:pandoc#formatting#mode = "ha"
+let g:pandoc#command#latex_engine = "pdflatex"
+let g:pandoc#formatting#smart_autoformat_on_cursormoved = 1
+let g:pandoc#command#autoexec_command = "Pandoc pdf"
+let g:pandoc#formatting#mode = "hA"
 let g:pandoc#formatting#textwidth = 72
-"let g:pandoc#formatting#equalprg = "pandoc -t markdown --reference-links [--columns {g:pandoc#formatting#textwidth}|no-wrap]"
+let g:pandoc#formatting#equalprg = "pandoc -t markdown --reference-links [--columns {g:pandoc#formatting#textwidth}|no-wrap]"
 let g:pandoc#spell#enabled = 1
 
 
@@ -276,7 +279,7 @@ set wildmode=list:longest,list:full
 set linebreak
 set textwidth=74
 set display=lastline
-set formatoptions=t1
+set formatoptions=
 " set wrapmargin=5
 
 "Nerdtree opens automatically if no files specified
