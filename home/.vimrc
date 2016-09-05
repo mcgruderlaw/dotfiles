@@ -75,10 +75,10 @@ set cursorline          " highlight current line
 " set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M:%S\")}
 " set statusline=[%n]\ %<%f\ \ \ [%M%R%H%W%Y]\ \ %=\ %l,%L\ \ \ %c\ \ \ %p%%
 set statusline=\"%f\"\ \ \ %m%r%h%w%y\ \ %=\ %l,%L\ \ \ %c\ \ \ %p%%
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-	set statusline+=%{ObsessionStatus()}
+"    set statusline+=%#warningmsg#
+"    set statusline+=%{SyntasticStatuslineFlag()}
+"    set statusline+=%*
+"	set statusline+=%{ObsessionStatus()}
 set showmatch           " highlight matching [{()}]
 set showmatch           " highlight matching [{()}]
 set wildmenu            " visual autocomplete for command menu
@@ -95,9 +95,9 @@ set complete=.,k,w,b,u,t,i
 set omnifunc=syntaxcomplete#Complete
 
 " Syntastic Settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1

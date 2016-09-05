@@ -10,6 +10,7 @@
 
 export EDITOR="vim"
 export BROWSER="firefox"
+export BROWSERCLI="w3m"
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignoredups"
 # export PAGER=/usr/local/bin/vimpager
@@ -72,6 +73,7 @@ alias v='vim --servername VIMSERVER'
 alias vs='vim --servername VIMSERVER --remote-silent'
 alias wf='sudo wifi-menu'
 alias x='startx'
+alias xr='xcompmgrrestart.sh'
 alias z='z.sh'
 alias mountm='sudo sshfs dmc@23.124.50.217:/data/Media/Music /media/Music/ -p 39966'
 
