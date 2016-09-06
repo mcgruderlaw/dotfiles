@@ -267,7 +267,7 @@ set number
 "set relativenumber
 "set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\%P%)
 
-set laststatus=2
+set laststatus=1
 set list
 set listchars=tab:→\ ,eol:¬
 "set listchars=eol:$
