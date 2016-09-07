@@ -51,7 +51,7 @@ myConfig = defaultConfig
 } `additionalKeys`
     [ (( mod4Mask, xK_f), spawn "firefox")]
 
-myBorderWidth   = 0
+myBorderWidth   = 2
 myFocusedBorderColor    = "#dc322f"
 -- myFocusedBorderColor    = "#005f00"
 -- myFocusedBorderColor    = "#ff0000"
@@ -70,12 +70,16 @@ myManageHook = composeAll
 
 -- myEventHook = fadeWindowsEventHook {- ... -}
 
-myFadeHook = composeAll [isUnfocused --> transparency 0.30
-                        --,                opaque
+--myFadeHook = composeAll [isUnfocused --> opacity 0.60
+--                        ,                opacity 0.75
+--                        ]
+
+myFadeHook = composeAll [opacity 0.99
+                        , isUnfocused --> opacity 0.96
                         ]
 
 -- myLogHook = fadeWindowsLogHook myFadeHook
-myLayout = Mirror tiled ||| Full ||| tiled ||| tiledR
+myLayout = Mirror tiled ||| nobordersLayout ||| tiled ||| tiledR
 --myLayout = mkToggle (single REFLECTX) $
 --           mkToggle (single REFLECTY) $
 --               (tiled ||| tiledR ||| Mirror tiled ||| Full)
@@ -126,5 +130,5 @@ myStartupHook = do
 --]
 
 -- myLogHook = fadeInactiveLogHook fadeAmount
---     where fadeAmount = 0.80
+--     where fadeAmount = 0.30
 -- 
