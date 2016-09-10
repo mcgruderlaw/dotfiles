@@ -143,6 +143,7 @@ nnoremap <leader>TT :TTemplate<CR>
 nnoremap <leader>sp :!aspell check %<CR>
 nnoremap <leader>ca :e $HOME/Documents/ofc/Cases/<CR>
 nnoremap <leader>ho :e $HOME/.homesick/repos/dotfiles/home/<CR>
+nnoremap <leader>no :e $HOME/Documents/Notes/<CR>
 nnoremap / /\v
 "Sentence Junctions
 nnoremap fc. r.wvUb
