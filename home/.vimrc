@@ -55,7 +55,7 @@ Plugin 'tpope/vim-vinegar'
 " Plugin 'honza/vim-snippets'
 " Plugin 'themoken/canto-curses'
 " Plugin 'vim-scripts/Command-T'
-Plugin 'maciakl/vim-neatstatus.git'
+" Plugin 'maciakl/vim-neatstatus.git'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'chrisbra/unicode.vim'
 Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
@@ -66,6 +66,7 @@ filetype plugin indent on
 syntax on
 
 let mapleader = ","
+let maplocalleader = "\\"
 
 set cursorline          " highlight current line
 " set statusline+=%F
@@ -74,10 +75,10 @@ set cursorline          " highlight current line
 " set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M:%S\")}
 " set statusline=[%n]\ %<%f\ \ \ [%M%R%H%W%Y]\ \ %=\ %l,%L\ \ \ %c\ \ \ %p%%
 set statusline=\"%f\"\ \ \ %m%r%h%w%y\ \ %=\ %l,%L\ \ \ %c\ \ \ %p%%
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-	set statusline+=%{ObsessionStatus()}
+"    set statusline+=%#warningmsg#
+"    set statusline+=%{SyntasticStatuslineFlag()}
+"    set statusline+=%*
+"	set statusline+=%{ObsessionStatus()}
 set showmatch           " highlight matching [{()}]
 set showmatch           " highlight matching [{()}]
 set wildmenu            " visual autocomplete for command menu
@@ -94,9 +95,9 @@ set complete=.,k,w,b,u,t,i
 set omnifunc=syntaxcomplete#Complete
 
 " Syntastic Settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -129,6 +130,7 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>
 "cnoremap sudow :w !sudo tee % >/dev/null
+nnoremap <leader>sq "qy:call ExecuteSQL()<CR>
 nnoremap <leader>ss :w !sudo tee % >/dev/null<cr>
 nnoremap <leader>s <esc>:w<cr>
 inoremap <leader>s <esc>:w<cr>
@@ -139,9 +141,18 @@ nnoremap <leader>lp :!pdflatex %<cr>
 nnoremap <leader>tt :TTarget<CR>
 nnoremap <leader>TT :TTemplate<CR>
 nnoremap <leader>sp :!aspell check %<CR>
-nnoremap <leader>ca :cd $HOME/Documents/ofc/Cases/
+nnoremap <leader>ca :e $HOME/Documents/ofc/Cases/<CR>
+nnoremap <leader>ho :e $HOME/.homesick/repos/dotfiles/home/<CR>
+nnoremap <leader>no :e $HOME/Documents/Notes/<CR>
 nnoremap / /\v
-
+"Sentence Junctions
+nnoremap fc. r.wvUb
+nnoremap fc, r,wvub
+nnoremap fc; r;wvub
+nnoremap fc- s -<esc>wvub
+xnoremap fc. s.<esc>wvUb
+xnoremap fc, s,<esc>wvub
+xnoremap fc; s;<esc>wvub
 
 " Spell checking  ---
 if version >= 700
@@ -244,10 +255,12 @@ let g:Tex_ViewRule_pdf = 'zathura'
 let g:Tex_GotoError = 1
 
 let g:pandoc#command#autoexec_on_writes = 1
-let g:pandoc#command#autoexec_command = "Pandoc! pdf"
-let g:pandoc#formatting#mode = "ha"
+let g:pandoc#command#latex_engine = "pdflatex"
+let g:pandoc#formatting#smart_autoformat_on_cursormoved = 1
+let g:pandoc#command#autoexec_command = "Pandoc pdf"
+let g:pandoc#formatting#mode = "hA"
 let g:pandoc#formatting#textwidth = 72
-"let g:pandoc#formatting#equalprg = "pandoc -t markdown --reference-links [--columns {g:pandoc#formatting#textwidth}|no-wrap]"
+let g:pandoc#formatting#equalprg = "pandoc -t markdown --reference-links [--columns {g:pandoc#formatting#textwidth}|no-wrap]"
 let g:pandoc#spell#enabled = 1
 
 
@@ -256,7 +269,7 @@ set number
 "set relativenumber
 "set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\%P%)
 
-set laststatus=2
+set laststatus=0
 set list
 set listchars=tab:→\ ,eol:¬
 "set listchars=eol:$
@@ -268,7 +281,7 @@ set wildmode=list:longest,list:full
 set linebreak
 set textwidth=74
 set display=lastline
-set formatoptions=t1
+set formatoptions=
 " set wrapmargin=5
 
 "Nerdtree opens automatically if no files specified
@@ -419,7 +432,8 @@ let g:pymode_options = 1
 let g:pymode_quickfix_minheight = 3
 let g:pymode_quickfix_maxheight = 6
 let g:pymode_python = 'python'
-let g:pymode_indent = []
+"let g:pymode_indent = []
+let g:pymode_indent = 1
 let g:pymode_folding = 1
 let g:pymode_motion = 1
 let g:pymode_doc = 1
@@ -599,12 +613,14 @@ map <leader>mp :exec '!mplayer ' . shellescape(getline('.')) <CR><CR>
 " stream justin tv ..etc
 map <leader>ls :exec '!livestreamer -p mplayer ' . shellescape(getline('.')) . 'best' <CR><CR>
 
-" watch streaming porn
+" watch streaming videos
 map <leader>p :exec '!mplayer $(youtube-dl -g ' . shellescape(getline('.')) . ')' <CR><CR>
 
 " download videos/files
 map <leader>yt :exec '!cd ~/Downloads; youtube-dl ' . shellescape(getline('.')) <CR><CR>
 map <leader>wg :exec '!cd ~/Downloads; wget -c ' . shellescape(getline('.')) <CR><CR>
+
+" source /home/dmc/scripts/executesql.vim
 
 iabbr Email parkermcgruderlaw@gmail.com
 iabbr dem David E. McGruder

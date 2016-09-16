@@ -16,12 +16,15 @@ import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.NoBorders
+import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Reflect
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Renamed
 import XMonad.Layout.Spacing
 import XMonad.Layout.Tabbed 
 import XMonad.Layout.ToggleLayouts
+import XMonad.Hooks.FadeInactive
+import XMonad.Hooks.FadeWindows
 
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 myBar = "xmobar"
@@ -38,13 +41,17 @@ myConfig = defaultConfig
     , workspaces         = myWorkspaces
 --    , keys              = myKeys
     , layoutHook        = myLayout
---    , manageHook        = myManageHook
+    , manageHook        = myManageHook
 --    , handleEventHook   = myEventHook
---    , logHook           = myLogHook
     , startupHook       = myStartupHook
-	}
+    --, logHook           = myLogHook
+    , logHook           = fadeWindowsLogHook myFadeHook
+    , handleEventHook = fadeWindowsEventHook
+    {- ... -}
+} `additionalKeys`
+    [ (( mod4Mask, xK_f), spawn "firefox")]
 
-myBorderWidth   = 4
+myBorderWidth   = 2
 myFocusedBorderColor    = "#dc322f"
 -- myFocusedBorderColor    = "#005f00"
 -- myFocusedBorderColor    = "#ff0000"
@@ -53,17 +60,35 @@ myNormalBorderColor     = "#000000"
 myModMask       = mod4Mask
 myTerminal      = "xterm"
 -- myWorkspaces = [ "Web", "Evernote", "Drafting", "Shell", "Mail", "Music", "IRC", "News", "Transmission", "Misc."]
-myWorkspaces = [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-myLayout = tiled ||| tiledR ||| Mirror tiled ||| Full
+myWorkspaces = [ "Web", "Drafting", "Shell1", "Shell2", "Mail", "Music", "IRC", "News", "Misc."]
+-- myWorkspaces = [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+myManageHook = composeAll
+     [ className =? "Firefox" --> doShift "Web"
+     , className =? "MPlayer" --> doFloat
+     ]
+
+-- myEventHook = fadeWindowsEventHook {- ... -}
+
+--myFadeHook = composeAll [isUnfocused --> opacity 0.60
+--                        ,                opacity 0.75
+--                        ]
+
+myFadeHook = composeAll [opacity 0.99
+                        , isUnfocused --> opacity 0.96
+                        ]
+
+-- myLogHook = fadeWindowsLogHook myFadeHook
+myLayout = Mirror tiled ||| nobordersLayout ||| tiled ||| tiledR
 --myLayout = mkToggle (single REFLECTX) $
 --           mkToggle (single REFLECTY) $
 --               (tiled ||| tiledR ||| Mirror tiled ||| Full)
                   where  
                        -- default tiling algorithm partitions the screen into two panes  
-                       tiled = spacing 0 $ Tall nmaster delta ratio  
+                       tiled = spacing 3 $ Tall nmaster delta ratio  
                     
                        -- reflected default tiling algorithm partitions the screen into two panes  
-                       tiledR = spacing 0 $ reflectHoriz $ Tall nmaster delta ratio  
+                       tiledR = spacing 3 $ reflectHoriz $ Tall nmaster delta ratio  
                     
                        -- The default number of windows in the master pane  
                        nmaster = 1  
@@ -72,7 +97,10 @@ myLayout = tiled ||| tiledR ||| Mirror tiled ||| Full
                        ratio = 1/2  
                     
                        -- Percent of screen to increment by when resizing panes  
-                       delta = 5/100
+                       delta = 3/100
+
+-- Define layout for specific workspaces
+nobordersLayout = smartBorders $ Full
 
 --myKeys = [ ((myModMask .|. controlMask, xK_x), sendMessage $ Toggle REFLECTX)
 --         , ((myModMask .|. controlMask, xK_y), sendMessage $ Toggle REFLECTY)
@@ -88,15 +116,19 @@ myLayout = tiled ||| tiledR ||| Mirror tiled ||| Full
 -- myStartupHook = ewmhDesktopsStartup
 myStartupHook :: X ()
 myStartupHook = do
-  ewmhDesktopsStartup
-  -- spawnOn "Web" "firefox"
-  -- spawnOn "Drafting" "xterm"
-  -- spawnOn "Shell" "xterm"
-  -- spawnOn "Mail" "vimpc"
-  -- spawnOn "Music" "mutt"
+    ewmhDesktopsStartup
+    spawnOn "Web" "firefox"
+    --spawnOn "Drafting" "xterm"
+    --spawnOn "Shell1" "xterm"
+    --spawnOn "Mail" "mutt"
+    --spawnOn "Music" "vimpc"
 
 -- toggle the status bar gap
 --[
 --((modMask,      xK_f    ), sendMessage ToggleStruts)
 --((modMask,        xK_semicolon), windows W.shiftMaster)
 --]
+
+-- myLogHook = fadeInactiveLogHook fadeAmount
+--     where fadeAmount = 0.30
+-- 

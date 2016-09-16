@@ -35,6 +35,14 @@ $0
 endsnippet
 
 
+snippet outline "outline block; add outlines package"
+\begin{outline}[enumerate]
+
+	\1 $0
+
+\end{outline}
+endsnippet
+
 snippet underline "Blank Underline"
 
 \makebox[$1]{\hrulefill}$0
@@ -216,3 +224,39 @@ cc: $11
 \end{document}
 
 endsnippet
+
+
+snippet chapter "Chapter Form"
+\documentclass{article}
+\usepackage{array}
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+\setlength{\extrarowheight}{4pt}
+\usepackage[top=1in, bottom=1in, left=1.20in, right=1.20in]{geometry}
+\linespread{1.6}
+
+\begin{document}
+
+\Large
+
+\begin{center}
+{\textbf{$1}}
+
+{\textbf{$2}}
+\end{center}
+
+\begin{table}[!h]
+{\Large
+\begin{tabular}{p{3.70 in} p{1.2in} p{1.2in} }
+
+\head{Question} & \head{Source} & \head{Notes}\\\\
+
+$3 & & \\\\
+
+
+\end{tabular}
+}
+\end{table}
+
+\end{document}
+endsnippet
+

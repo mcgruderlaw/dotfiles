@@ -1,0 +1,40 @@
+# mailcap file for mutt
+# copy it to ~/.mutt/mailcap
+
+# general hint
+# find out unknown file extension mime type:
+# in the mutt index view, go to the mail and press "|"
+# then enter the command: grep Content-Type
+
+# .pdf
+# sudo aptitude install poppler-utils
+application/pdf;            pdftotext -q -raw %s -; copiousoutput
+application/vnd.fdf;        pdftotext -q -raw %s -; copiousoutput
+
+# .html from gotbletu
+text/html; "$BROWSER" %s &; test=test -n "$DISPLAY"; needsterminal;
+text/html; "$BROWSERCLI" -I %{charset} -T text/html; copiousoutput;
+
+# microsoft office
+# .docx (since Office 2010)
+# https://github.com/rainey/antiword-xp-rb
+application/vnd.ms-word.document.12; cat %s | antiwordxp.rb; copiousoutput
+application/vnd.openxmlformats-officedocument.wordprocessingml.document;  cat %s | /home/dmc/scripts/antiword-xp-rb-master/antiwordxp.rb; copiousoutput
+#application/vnd.openxmlformats-officedocument.wordprocessingml.document;  antiword %s; copiousoutput
+
+# .doc
+# sudo aptitude install antiword
+application/msword;         antiword %s; copiousoutput
+
+# .xls
+# sudo aptitude install catdoc
+application/vnd.ms-excel;      xls2csv -x %s -s cp1252 -d utf-8; copiousoutput
+
+# .rtf
+# sudo aptitude install unrtf
+application/rtf;     unrtf --text %s; copiousoutput
+
+# OpenOffice
+# .odt
+application/vnd.oasis.opendocument.text;    odt2txt --stdout %s; copiousoutput
+

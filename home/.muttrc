@@ -1,8 +1,10 @@
 # -*-muttrc-*-
 
-set spoolfile = "+Personal/INBOX"
+#set spoolfile = "+Personal/INBOX"
+set spoolfile = "+Work/INBOX"
 
-source ~/.mutt/accounts/Personal
+source ~/.mutt/accounts/Work
+#source ~/.mutt/accounts/Personal
 #source ~/.mutt/colorlight
 
 folder-hook Personal/* source ~/.mutt/accounts/Personal
@@ -16,6 +18,8 @@ set timeout=15
 set mail_check=60
 set pager_index_lines=10
 
+# open in gui browser: hit "v" then go down to text/html then hit "m"
+bind attach <return> view-mailcap
 auto_view text/html
 alternative_order text/plain text/enriched text/html     # save html for last
 

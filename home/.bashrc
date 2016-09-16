@@ -10,6 +10,7 @@
 
 export EDITOR="vim"
 export BROWSER="firefox"
+export BROWSERCLI="w3m"
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignoredups"
 # export PAGER=/usr/local/bin/vimpager
@@ -21,7 +22,7 @@ export GIT_COMMITTER_NAME="David E. McGruder"
 PS1='[\u@\h \W]\$ '
 complete -cf sudo
 complete -cf man
-[ -n "$XTERM_VERSION" ] # && transset-df -a >/dev/null
+[ -n "$XTERM_VERSION" ] # && transset-df --id "$WINDOWID" >/dev/null OR transset-df -a >/dev/null
 
 #alsi archey3
 
@@ -45,6 +46,8 @@ alias gits='git status'
 alias homep2p='ssh mcgruderlaw@192.168.1.82'
 alias homevbox='ssh mcgruderlaw@192.168.1.71'
 alias lbg='xterm -bg white -fg blue &'
+alias light='xrdb /home/mcgruderlaw/.xresources/Xresources.light'
+alias dark='xrdb /home/mcgruderlaw/.xresources/Xresources.dark'
 alias l='ls -lh --color=auto'
 alias .l='ls -lah --color=auto'
 alias ls='ls --color=auto'
@@ -70,6 +73,7 @@ alias v='vim --servername VIMSERVER'
 alias vs='vim --servername VIMSERVER --remote-silent'
 alias wf='sudo wifi-menu'
 alias x='startx'
+alias xr='xcompmgrrestart.sh'
 alias z='z.sh'
 alias mountm='sudo sshfs dmc@23.124.50.217:/data/Media/Music /media/Music/ -p 39966'
 
@@ -165,6 +169,12 @@ notify-send --expire-time=300000 "Time to go"
 mpc -q toggle
 mplayer -loop 10 /usr/lib/libreoffice/share/gallery/sounds/gong.wav
 EOF
+}
+
+xcompmgr_restart() {
+  killall xcompmgr
+  sleep 1
+  xcompmgr -r7 -o 0.25 -l-10 -t-8 -D7 &
 }
 
 w3c() {

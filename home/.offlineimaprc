@@ -29,14 +29,14 @@ localfolders = ~/Mail/Firm
 [Repository Personal-Remote]
 type = Gmail
 remoteuser = mcgruderlaw@gmail.com
-remotepass = 1926jowCol1967
+remotepass = nMc*e4AqKkkYvy7TK!hHj
 realdelete = no
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 [Repository Work-Remote]
 type = Gmail
 remoteuser = parkermcgruderlaw@gmail.com
-remotepass = 44060PMA
+remotepass = 48302PMA
 realdelete = no
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
