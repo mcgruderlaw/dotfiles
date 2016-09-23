@@ -281,7 +281,7 @@ set wildmode=list:longest,list:full
 set linebreak
 set textwidth=74
 set display=lastline
-set formatoptions=
+set formatoptions=t1
 " set wrapmargin=5
 
 "Nerdtree opens automatically if no files specified
@@ -572,10 +572,10 @@ au VimResized * :wincmd =
 
 " Auto format in insert mode
 
-" augroup PROSE autocmd InsertEnter * set formatoptions+=a autocmd
-"         autocmd InsertEnter * set formatoptions+=a
-"         autocmd InsertLeave * set formatoptions-=a
-" augroup END
+augroup PROSE
+        autocmd InsertEnter * set formatoptions+=a
+        autocmd InsertLeave * set formatoptions-=a
+augroup END
 
 " Reformat
 noremap Q gqap
@@ -588,21 +588,18 @@ command! Prose inoremap <buffer> . .<C-G>u|
             \ inoremap <buffer> ! !<C-G>u|
             \ inoremap <buffer> ? ?<C-G>u|
             \ setlocal spell spelllang=en_us
-            \     nolist wrap tw=0 lbr wm=0|
-
-"            \ augroup PROSE|
-"            \   autocmd InsertEnter <buffer> set fo+=a|
-"            \   autocmd InsertLeave <buffer> set fo-=a|
-"            \ augroup END
+            \     nolist nowrap tw=74 fo=t1 nonu|
+            \ augroup PROSE|
+            \   autocmd InsertEnter <buffer> set fo+=a|
+            \   autocmd InsertLeave <buffer> set fo-=a|
+            \ augroup END
 
 command! Code silent! iunmap <buffer> .|
             \ silent! iunmap <buffer> !|
             \ silent! iunmap <buffer> ?|
             \ setlocal nospell list nowrap
-            \     tw=74 fo=cqrl showbreak=… nu|
+            \     tw=74 fo=tcqr showbreak=… nu|
             \ silent! autocmd! PROSE * <buffer>
-
-            "\     nolist nowrap tw=74 fo=t1 nonu|
 
 " open with locate or find command
 " tutorial video: https://www.youtube.com/watch?v=X0KPl5O006M
