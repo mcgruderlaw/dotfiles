@@ -9,6 +9,7 @@
 #if [[ \$TMUX ]]; then source ~/.tmux-git/tmux-git.sh; fi
 
 export EDITOR="vim"
+export MANWIDTH=74
 export BROWSER="firefox"
 export BROWSERCLI="w3m"
 export HISTIGNORE="clear:history"
