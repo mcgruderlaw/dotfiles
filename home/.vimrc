@@ -572,10 +572,10 @@ au VimResized * :wincmd =
 
 " Auto format in insert mode
 
-augroup PROSE
-        autocmd InsertEnter * set formatoptions+=a
-        autocmd InsertLeave * set formatoptions-=a
-augroup END
+"augroup PROSE
+"        autocmd InsertEnter * set formatoptions+=a
+"        autocmd InsertLeave * set formatoptions-=a
+"augroup END
 
 " Reformat
 noremap Q gqap
@@ -584,22 +584,22 @@ noremap Q gqap
 nnoremap \s ea<C-X><C-S>
 
 " Switch between code and prose
-command! Prose inoremap <buffer> . .<C-G>u|
-            \ inoremap <buffer> ! !<C-G>u|
-            \ inoremap <buffer> ? ?<C-G>u|
-            \ setlocal spell spelllang=en_us
-            \     nolist nowrap tw=74 fo=t1 nonu|
-            \ augroup PROSE|
-            \   autocmd InsertEnter <buffer> set fo+=a|
-            \   autocmd InsertLeave <buffer> set fo-=a|
-            \ augroup END
-
-command! Code silent! iunmap <buffer> .|
-            \ silent! iunmap <buffer> !|
-            \ silent! iunmap <buffer> ?|
-            \ setlocal nospell list nowrap
-            \     tw=74 fo=tcqr showbreak=… nu|
-            \ silent! autocmd! PROSE * <buffer>
+"command! Prose inoremap <buffer> . .<C-G>u|
+"            \ inoremap <buffer> ! !<C-G>u|
+"            \ inoremap <buffer> ? ?<C-G>u|
+"            \ setlocal spell spelllang=en_us
+"            \     nolist nowrap tw=74 fo=t1 nonu|
+"            \ augroup PROSE|
+"            \   autocmd InsertEnter <buffer> set fo+=a|
+"            \   autocmd InsertLeave <buffer> set fo-=a|
+"            \ augroup END
+"
+"command! Code silent! iunmap <buffer> .|
+"            \ silent! iunmap <buffer> !|
+"            \ silent! iunmap <buffer> ?|
+"            \ setlocal nospell list nowrap
+"            \     tw=74 fo=tcqr showbreak=… nu|
+"            \ silent! autocmd! PROSE * <buffer>
 
 " open with locate or find command
 " tutorial video: https://www.youtube.com/watch?v=X0KPl5O006M
