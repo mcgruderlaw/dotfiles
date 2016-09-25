@@ -234,7 +234,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "%P
 "set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 au BufEnter,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
