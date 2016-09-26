@@ -79,7 +79,7 @@ myFadeHook = composeAll [opacity 0.99
                         ]
 
 -- myLogHook = fadeWindowsLogHook myFadeHook
-myLayout = Mirror tiled ||| nobordersLayout ||| tiled ||| tiledR
+myLayout = nobordersLayout ||| Mirror tiled ||| tiled ||| tiledR
 --myLayout = mkToggle (single REFLECTX) $
 --           mkToggle (single REFLECTY) $
 --               (tiled ||| tiledR ||| Mirror tiled ||| Full)
