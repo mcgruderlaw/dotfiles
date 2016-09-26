@@ -281,7 +281,7 @@ set wildmode=list:longest,list:full
 set linebreak
 set textwidth=74
 set display=lastline
-set formatoptions=t1
+set formatoptions=q
 " set wrapmargin=5
 
 "Nerdtree opens automatically if no files specified
