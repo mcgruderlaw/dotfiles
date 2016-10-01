@@ -3,6 +3,7 @@ Config { font = "xft:Inconsolata:size=9,xft:Monospace"
     , fgColor = "#a8a8a8"
     , position = Top
     , lowerOnStart = True
+	, hideOnStart = True
     , sepChar = "%"
     , alignSep = "}{"
 --    , template = "%StdinReader% }{ %mpd% | %mail% %battery% %multicpu% %memory% %disku% | %wlan0%%eth0% | %date% "
