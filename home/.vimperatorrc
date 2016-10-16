@@ -30,6 +30,8 @@ set defsearch=duckduckgo
 " Highlight search keyword
 set hlsearch
 
+set complete=Sh
+
 " a max number of listing items
 set maxitems=40
 
