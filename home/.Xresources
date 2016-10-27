@@ -1,4 +1,4 @@
-xterm*faceName: xft:monofur:size=12:antialias=on
+xterm*faceName: xft:Inconsolata:size=12:antialias=on
 xterm*termName: xterm-256color
 xterm*scaleHeight: 1.2
 
