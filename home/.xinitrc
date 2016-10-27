@@ -28,7 +28,7 @@ xcompmgr -r7 -o 0.25 -l-10 -t-8 -D7 &
 
 # dropboxd
 
-eval $(ssh-agent)
+#eval $(ssh-agent)
 
 sh ~/scripts/.fehbg &
 
