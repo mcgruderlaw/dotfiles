@@ -3,6 +3,7 @@ Config { font = "xft:Inconsolata:size=9,xft:Monospace"
     , fgColor = "#a8a8a8"
     , position = Top
     , lowerOnStart = True
+    , pickBroadest = True
 --	, hideOnStart = True
     , sepChar = "%"
     , alignSep = "}{"
