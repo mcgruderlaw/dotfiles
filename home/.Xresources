@@ -5,7 +5,7 @@ xterm*scaleHeight: 1.2
 URxvt*font: xft:Inconsolata:size=12:antialias=on
 URxvt*termName: rxvt-unicode-256color
 URxvt*scrollBar: false
-URxvt*scaleHeight: 1.2
+URxvt*lineSpace: 5
 
 #define S_base03        #002b36
 #define S_base02        #073642
