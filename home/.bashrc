@@ -103,7 +103,8 @@ alias mountm='sudo sshfs dmc@23.124.50.217:/data/Media/Music /media/Music/ -p 39
 # source ~/bash-git-prompt/gitprompt.sh
 
 # the ultimate git ps1 bash prompt
-source /usr/share/git/completion/git-prompt.sh
+#source /usr/share/git/completion/git-prompt.sh
+source /usr/share/git/git-prompt.sh
 source ~/.bash_aliases
 
 
