@@ -13,8 +13,8 @@ set background=dark
 
 " Vim >= 7.0 specific colors
 if version >= 700
-hi CursorLine     guifg=NONE      guibg=#32322f   guisp=NONE      gui=NONE   ctermfg=NONE   ctermbg=233    cterm=NONE
-hi CursorLineNr   guifg=#8a8a8a   guibg=#32322f   guisp=NONE      gui=NONE   ctermfg=245    ctermbg=233    cterm=NONE
+hi CursorLine     guifg=NONE      guibg=#32322f   guisp=NONE      gui=NONE   ctermfg=NONE   ctermbg=NONE    cterm=NONE
+hi CursorLineNr   guifg=#8a8a8a   guibg=#32322f   guisp=NONE      gui=NONE   ctermfg=245    ctermbg=NONE    cterm=NONE
 hi MatchParen     guifg=#eae788   guibg=#857b6f   guisp=NONE      gui=bold   ctermfg=228    ctermbg=101    cterm=bold
 hi PMenu          guifg=#dddddd   guibg=#423d35   guisp=#423d35   gui=NONE   ctermfg=253    ctermbg=238    cterm=NONE
 hi PMenuSbar      guifg=NONE      guibg=#848688   guisp=#848688   gui=NONE   ctermfg=NONE   ctermbg=102    cterm=NONE

@@ -35,10 +35,10 @@ sh ~/scripts/.fehbg &
 /usr/bin/VBoxClient-all
 
 # exec gnome-session
-# exec startkde
+exec ck-launch-session dbus-launch --sh-syntax --exit-with-session startkde
 # exec startxfce4
 # exec awesome
-exec xmonad
+# exec ck-launch-session dbus-launch --sh-syntax --exit-with-session xmonad
 # ...or the Window Manager of your choice
 
 
