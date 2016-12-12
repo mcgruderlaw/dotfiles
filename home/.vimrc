@@ -45,9 +45,9 @@ Plugin 'tpope/vim-obsession'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'gerw/vim-tex-syntax'
 Plugin 'stefandtw/quickfix-reflector.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'noahfrederick/vim-noctu'
-Plugin 'noahfrederick/vim-hemisu'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'noahfrederick/vim-noctu'
+" Plugin 'noahfrederick/vim-hemisu'
 Plugin 'jonathanfilip/lucius'
 Plugin 'tpope/vim-vinegar'
 " Plugin 'bling/vim-airline'
@@ -382,12 +382,12 @@ let g:UltiSnipsEditSplit="vertical"
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_by_filename = 0
-let g:ctrlp_match_window = 'bottom,order:ttb,results:100'
+let g:ctrlp_match_window = 'bottom,order:ttb,results:10'
 let g:ctrlp_switch_buffer = 'Et'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = '0'
+let g:ctrlp_root_markers = ['.tex', '.sty']
 let g:ctrlp_user_command = 'ag %s -l --nogroup --nobreak --noheading --ignore Mail --ignore win32 --ignore Desktop --hidden --depth -1 -g ""'
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 150

@@ -217,3 +217,7 @@ tara() {
 leah() {
 		feh --image-bg black --scale-down ~/Downloads/leah
 }
+
+# Prevent Wine from adding menu entries and desktop links.
+export WINEDLLOVERRIDES='winemenubuilder.exe=d'
+

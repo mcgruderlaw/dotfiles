@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Config.Kde
 import Data.Monoid
 import System.Exit
 import qualified XMonad.StackSet as W
@@ -32,7 +33,7 @@ myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 
-myConfig = defaultConfig 
+myConfig = kde4Config -- defaultConfig 
     { terminal           = myTerminal
     , modMask            = myModMask
     , borderWidth        = myBorderWidth
