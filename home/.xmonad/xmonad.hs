@@ -33,7 +33,8 @@ myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 
-myConfig = kde4Config -- defaultConfig 
+--myConfig = defaultConfig 
+myConfig = kdeConfig
     { terminal           = myTerminal
     , modMask            = myModMask
     , borderWidth        = myBorderWidth
@@ -59,7 +60,8 @@ myFocusedBorderColor    = "#dc322f"
 -- myFocusedBorderColor    = "#222200"
 myNormalBorderColor     = "#000000"
 myModMask       = mod4Mask
-myTerminal      = "urxvt"
+--myTerminal      = "urxvt"
+myTerminal      = "konsole"
 -- myWorkspaces = [ "Web", "Evernote", "Drafting", "Shell", "Mail", "Music", "IRC", "News", "Transmission", "Misc."]
 myWorkspaces = [ "Web", "Drafting", "Shell1", "Shell2", "Mail", "Music", "IRC", "News", "Misc."]
 -- myWorkspaces = [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
