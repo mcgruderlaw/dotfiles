@@ -67,7 +67,7 @@ myWorkspaces = [ "Web", "Drafting", "Shell1", "Shell2", "Mail", "Music", "IRC", 
 -- myWorkspaces = [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 myManageHook = composeAll
-     [ className =? "Firefox" --> doShift "Web"
+     [ className =? "Alsamixer" --> doFloat
      , className =? "MPlayer" --> doFloat
      ]
 
@@ -120,8 +120,8 @@ nobordersLayout = smartBorders $ Full
 myStartupHook :: X ()
 myStartupHook = do
     ewmhDesktopsStartup
-    spawnOn "Web" "firefox"
-    --spawnOn "Drafting" "xterm"
+    --spawnOn "Web" "firefox"
+    spawnOn "Drafting" "konsole"
     --spawnOn "Shell1" "xterm"
     --spawnOn "Mail" "mutt"
     --spawnOn "Music" "vimpc"
