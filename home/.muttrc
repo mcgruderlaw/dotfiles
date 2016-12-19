@@ -1,6 +1,7 @@
-
 # Folder hooks
 folder-hook 'account.com.gmail.mcgruderlaw' 'source ~/.mutt/account.com.gmail.mcgruderlaw'
+folder-hook 'account.com.gmail.parkermcgruderlaw' 'source ~/.mutt/account.com.gmail.parkermcgruderlaw'
+folder-hook 'account.com.gmail.dmcgruder' 'source ~/.mutt/account.com.gmail.dmcgruder'
 #folder-hook 'account.com.yahoo.gotbletu' 'source ~/.mutt/account.com.yahoo.gotbletu'
 #folder-hook 'account.com.live.gotbletu' 'source ~/.mutt/account.com.live.gotbletu'
 #folder-hook 'account.com.hotmail.gotbletu' 'source ~/.mutt/account.com.hotmail.gotbletu'
@@ -10,7 +11,9 @@ source ~/.mutt/account.com.gmail.mcgruderlaw
 
 # Macros for switching accounts
 
-macro index <F12> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.mcgruderlaw<enter><change-folder>!<enter>'
+macro index mcg '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.mcgruderlaw<enter><change-folder>!<enter>'
+macro index pma '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.parkermcgruderlaw<enter><change-folder>!<enter>'
+macro index dmc '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.dmcgruder<enter><change-folder>!<enter>'
 #macro index <F11> '<sync-mailbox><enter-command>source ~/.mutt/account.com.yahoo.gotbletu<enter><change-folder>!<enter>'
 #macro index <F10> '<sync-mailbox><enter-command>source ~/.mutt/account.com.live.gotbletu<enter><change-folder>!<enter>'
 #macro index <F9> '<sync-mailbox><enter-command>source ~/.mutt/account.com.hotmail.gotbletu<enter><change-folder>!<enter>'
@@ -44,29 +47,64 @@ bind editor <space> noop
 #-------- Color Theme {{{
 #------------------------------------------------------
 
-color hdrdefault cyan default
-color attachment yellow default
+#source ~/.mutt/colorscheme
 
-color header brightyellow default "From: "
-color header brightyellow default "Subject: "
-color header brightyellow default "Date: "
-
-color quoted green default
-color quoted1 cyan default
-color quoted2 green default
-color quoted3 cyan default
-
-color error     red             default         # error messages
-color message   white           default         # message  informational messages
-color indicator white           red             # indicator for the "current message"
-color status    white           blue            # status lines in the folder index sed for the mini-help line
-color tree      red             default         # the "tree" display of threads within the folder index
-color search    white           blue            # search matches found with search within the internal pager
-color markers   red             default         # The markers indicate a wrapped line hen showing messages with looong lines
-
-color index     yellow default  '~O'
-color index     yellow default  '~N'
-color index     brightred       default '~F'    # Flagged Messages are important!
-color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"
+#color hdrdefault cyan default
+#color attachment yellow default
+#
+#color header brightyellow default "From: "
+#color header brightyellow default "Subject: "
+#color header brightyellow default "Date: "
+#
+#color quoted green default
+#color quoted1 cyan default
+#color quoted2 green default
+#color quoted3 cyan default
+#
+#color error     red             default         # error messages
+#color message   white           default         # message  informational messages
+#color indicator white           red             # indicator for the "current message"
+#color status    white           blue            # status lines in the folder index sed for the mini-help line
+#color tree      red             default         # the "tree" display of threads within the folder index
+#color search    white           blue            # search matches found with search within the internal pager
+#color markers   red             default         # The markers indicate a wrapped line hen showing messages with looong lines
+#
+#color index     yellow default  '~O'
+#color index     yellow default  '~N'
+#color index     brightred       default '~F'    # Flagged Messages are important!
+#color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"
 # }}} 
+#
+#color body yellow black
+#color hdrdefault yellow black
+#color quoted yellow black
+#color signature yellow black
+#color attachment red black
+#color message brightred black
+#color error brightred black
+#color indicator black red
+#color status brightgreen blue
+#color tree white black
+#color normal white black 
+#color markers red black 
+#color search white black 
+#color tilde brightmagenta black 
+#color index blue black ~F 
+#color index red black "~N|~O"
+
+alias evernote Evernote Account <mcgruderlaw.5842f@m.evernote.com>
+alias thomashibler Thomas Hibler <thomashibler@yahoo.com>
+alias pma Parker McGruder & Assoc. <parkermcgruderlaw@gmail.com>
+alias newman Newman Court <newmancourt@yahoo.com>
+alias ljweisslaw Leon  <ljweisslaw@aol.com>
+alias Leon Leon Weiss <ljweisslaw@aol.com>
+alias parkslauri Lauri Parks <parkslauri@gmail.com>
+alias jhayden \"John B. Hayden\" <wolfhayden@yahoo.com>
+alias lurton Lurton Lipscomb <resurrectionfinancial@gmail.com>
+alias george George Johnson <gjgolf1000@woh.rr.com>
+alias Erin Erin Rogers <Erin@pipermanagement.com>
+alias hwp \"H. Wallace Parker\" <thinker0008@aol.com>
+alias bob Bob Wilson <rw33480@yahoo.com>
+alias reg Reggie Hayes <reggiehayes@pdsicontractors.com>
+alias len Len Travis <lenvontetravis@pdsicontractors.com>
 
