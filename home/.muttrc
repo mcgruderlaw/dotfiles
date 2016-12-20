@@ -48,9 +48,9 @@ source ~/.mutt/account.com.gmail.mcgruderlaw
 
 # Macros for switching accounts
 
-macro index mcg '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.mcgruderlaw<enter><change-folder>!<enter>'
-macro index pma '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.parkermcgruderlaw<enter><change-folder>!<enter>'
-macro index dmc '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.dmcgruder<enter><change-folder>!<enter>'
+macro index <F12> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.mcgruderlaw<enter><change-folder>!<enter>'
+macro index <F11> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.parkermcgruderlaw<enter><change-folder>!<enter>'
+macro index <F10> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.dmcgruder<enter><change-folder>!<enter>'
 #macro index <F11> '<sync-mailbox><enter-command>source ~/.mutt/account.com.yahoo.gotbletu<enter><change-folder>!<enter>'
 #macro index <F10> '<sync-mailbox><enter-command>source ~/.mutt/account.com.live.gotbletu<enter><change-folder>!<enter>'
 #macro index <F9> '<sync-mailbox><enter-command>source ~/.mutt/account.com.hotmail.gotbletu<enter><change-folder>!<enter>'
