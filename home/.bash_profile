@@ -10,7 +10,7 @@ PATH=$PATH:/usr/sbin:~/.cabal:~/.cabal/bin:~/.vim:~/.w3m:~/bin:~/local:~/local/b
 export PATH
 export PATH="${PATH}:$HOME/scripts"
 export LANG=en_US.UTF-8
-export TERM=xterm-256color
+#export TERM=xterm-256color
 export TERM=xterm-256color
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" 
 export CASES="$HOME/Documents/ofc/Cases/"

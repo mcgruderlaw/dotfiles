@@ -1,0 +1,50 @@
+###Colors
+#
+color normal            default         default         # Normal text
+color indicator         color226        color240        # Selected entry
+color tree              color250        default         # Thread arrows
+color status            color118        color238        # Status bar
+color error             color197        default         # Errors
+color message           color220        default         # Info messages
+color signature         color242        default         # Signature
+color attachment        color242        default         # MIME attachments
+color search            black           color149        # Search matches
+color tilde             color246        default         # ~ at bottom of msg
+color markers           color246        default         # + at beginning of wrapped lines
+
+# Quotes
+color quoted            color250        default
+color quoted1           color245        default
+color quoted2           color240        default
+color quoted3           color240        default
+color quoted4           color240        default
+color quoted5           color240        default
+color quoted6           color240        default
+color quoted7           color240        default
+color quoted8           color240        default
+color quoted9           color240        default
+
+# Header
+set   my_hdrback =      color236                         # Header background block
+color hdrdefault        color247        $my_hdrback      # Default header lines
+color header            color214        $my_hdrback      "^From:"
+color header            color228        $my_hdrback      "^(To|Cc|Bcc):"
+color header            color81         $my_hdrback      "^Subject:"
+color header            color219        $my_hdrback      "^Date:"
+
+# Body
+color body              color45         default         "(http|https|ftp|news|telnet|finger)://[^ ]+"
+color body              color220        default         "[-a-z_0-9.+]+@[-a-z_0-9.]+"
+color body              color229        default         "(^|)\\*[-a-z0-9*]+\\*[,.?]?[ \n]"
+color body              color159        default         "(^|)_[-a-z0-9_]+_[,.?]?[ \n]"
+color bold              color229        default
+color underline         color159        default
+
+# Index
+uncolor index *         # unset all color index entries
+color index             color245        default         "*"
+color index             color250        default         ~O      # Old
+color index             color255        default         ~N      # New
+color index             color192        default         ~F      # Flagged
+color index             color220        default         ~T      # Tagged
+color index             color160        default         ~D      # Delete
