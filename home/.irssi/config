@@ -377,4 +377,5 @@ settings = {
     nick = "sololittle";
   };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { theme = "initrd.theme"; };
 };
