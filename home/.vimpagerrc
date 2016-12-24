@@ -1,8 +1,0 @@
-let mapleader = ","
-set textwidth=74
-colorscheme hemisu 
-set background=dark
-hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
-hi NonText ctermbg=NONE
-hi Search ctermbg=red
-nnoremap <leader><space> :nohlsearch<CR>
