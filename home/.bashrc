@@ -10,7 +10,7 @@
 
 export EDITOR="vim"
 export MANWIDTH=74
-export BROWSER="firefox"
+export BROWSER="chromium"
 export BROWSERCLI="w3m"
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignoredups"
