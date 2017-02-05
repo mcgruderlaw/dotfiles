@@ -15,7 +15,7 @@ browser $BROWSER
 #download-full-page yes		# for feeds with link only then dl full page
 download-retries 4
 download-timeout 60
-save-path ~/Downloads
+save-path ~/Downloads/Newsbeuter
 feedlist-format " %n %4i %11u %t -- %T"
 #articlelist-format  "%4i %f %D   %?T?|%-17T|  ?%t"
 #notify-format       "%d new articles (%n unread articles, %f unread feeds)"
@@ -30,7 +30,7 @@ show-read-articles no
 #}}}
 #-------- podbeuter {{{
 #------------------------------------------------------
-download-path		"~/Downloads/%n"
+download-path		"~/Downloads/Newsbeuter"
 max-downloads		2
 player			"$PLAYER"
 
