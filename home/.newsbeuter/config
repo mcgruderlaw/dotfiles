@@ -69,17 +69,48 @@ bind-key h quit
 bind-key ESC hard-quit
 
 # use macro prefix key ( default: , )
-macro i set browser "$IMAGEVIEWER %u"; open-in-browser ; set browser "$BROWSER %u"
-macro o set browser "$BROWSERCLI %u"; open-in-browser ; set browser "$BROWSER %u"
-macro m set browser "$PLAYER %u"; open-in-browser ; set browser "$BROWSER %u"
-macro r set browser "rtv -l %u"; open-in-browser ; set browser "$BROWSER %u"
-
+#macro i set browser "$IMAGEVIEWER %u"; open-in-browser ; set browser "$BROWSER %u"
+#macro o set browser "$BROWSERCLI %u"; open-in-browser ; set browser "$BROWSER %u"
+#macro m set browser "$PLAYER %u"; open-in-browser ; set browser "$BROWSER %u"
+#macro r set browser "rtv -l %u"; open-in-browser ; set browser "$BROWSER %u"
+#
 # macro y set browser "$PLAYER $(youtube-dl -g %u)"; open-in-browser ; set browser "$BROWSER %u"
 
 #}}}
 #
 #
 
+#-------- macros {{{
+#------------------------------------------------------
+# Note: macro prefix key ( default: , )
+
+# open in cli web browser
+# w3m: https://www.youtube.com/watch?v=Z22cFTB-uqg
+# tmux: https://www.youtube.com/watch?v=ZNM1KfqpyGo
+# macro o set browser "$BROWSERCLI %u"; open-in-browser ; set browser "$BROWSER %u"
+macro o set browser "tmux split-window && tmux send-keys '$BROWSERCLI %u && tmux kill-pane\n'"; open-in-browser ; set browser "$BROWSER %u"
+
+# read reddit comments with rtv (reddit terminal viewer)
+# rtv: https://www.youtube.com/watch?v=jc2ZVSof5-g
+# macro r set browser "rtv -l %u"; open-in-browser ; set browser "$BROWSER %u"
+macro r set browser "tmux split-window && tmux send-keys 'rtv -l %u && tmux kill-pane\n'"; open-in-browser ; set browser "$BROWSER %u"
+
+# add video or audio to play queue using mpv (requires: task-spooler, mpv, youtube-dl)
+# task-spooler: https://www.youtube.com/watch?v=wv8D8wT20ZY
+# youtube-dl: https://www.youtube.com/watch?v=MFxlwVhwayg
+macro p set browser "ts mpv --ontop --no-border --force-window --autofit=500x280 --geometry=-15-50 %u"; open-in-browser ; set browser "$BROWSER %u"
+
+# copy url to clipboard "yank"
+# xclip: https://www.youtube.com/watch?v=fKP0FLp3uW0
+macro y set browser "echo -n %u | xclip -selection clipboard"; open-in-browser ; set browser "$BROWSER %u"
+
+
+# read saved files
+# ranger: https://www.youtube.com/watch?v=qooLR8NmYKs
+# w3m context url: https://www.youtube.com/watch?v=C7YPjbrTeCs
+macro s set browser "tmux split-window && tmux send-keys 'ranger ~/.newsbeuter/saved_articles && tmux kill-pane\n'" ; open-in-browser ; set browser "$BROWSER %u"
+
+# }}}
 # Ivaylo Kuzev <ivkuzev@gmail.com>, 2014
 # zenburn like color scheme for newsbeuter <http://www.newsbeuter.org/>
 
