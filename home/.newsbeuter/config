@@ -25,7 +25,7 @@ show-read-articles no
 #goto-next-feed no
 #max-items 500
 #refresh-on-startup no
-#text-width 72
+text-width 80
 #prepopulate-query-feeds yes
 #}}}
 #-------- podbeuter {{{
