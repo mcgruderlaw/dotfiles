@@ -262,8 +262,43 @@ endsnippet
 
 snippet clerk_ltr "Letter to clerk of court"
 
-Enclosed you will find the original and two copies of $1 and an attorney check for the filing fee in the amount of $2.\\
+Dear Clerk:\\\\
 
-Please file the documents and return a file-stamped copy to me in the enclosed self-addressed and stamped envelope. Thank you.
+Enclosed you will find the original and two copies of $1 and an attorney check for the filing fee in the amount of $2.\\\\
+
+Please file the documents and return a file-stamped copy to me in the enclosed self-addressed and stamped envelope. Thank you.\\\\
+
+endsnippet
+
+
+snippet opening "Opening Template"
+
+\\documentclass[12pt]{article}
+\\usepackage{indentfirst}
+
+\\begin{document}
+\\title{Opening: People v. $1}
+\\author{David E. McGruder}
+\\maketitle
+
+\\section{Introduction}
+
+The is the case of $0
+
+\\section{Steady State}
+
+\\newpage
+
+\\section{Story}
+
+\\subsection{I}
+
+\\subsection{II}
+
+\\newpage
+
+\\section{Closing}
+
+\\end{document}
 
 endsnippet
