@@ -3,6 +3,10 @@ http://www.blackagendareport.com/rss.xml commentary
 http://feeds.dailykos.com/dailykos/index.xml news
 http://www.aljazeera.com/Services/Rss/?PostingId=2007731105943979989 news
 https://www.archlinux.org/feeds/news/ programming
+https://www.gentoo.org/rdf/en/gentoo-news.rdf programming
+https://packages.gentoo.org/packages/added.atom programming
+https://packages.gentoo.org/packages/updated.atom programming
+http://feeds.feedburner.com/PythonInsider programming
 http://feeds.findlaw.com/FindlawNews-TopStories law
 http://feeds.findlaw.com/LegalGrounds law
 http://feeds.findlaw.com/FindLawMichSup law
@@ -16,8 +20,6 @@ http://feeds.feedburner.com/litigationps/NACO?format=xml law
 http://espn.go.com/espnradio/feeds/rss/podcast.xml?id=6962629 sports
 http://espn.go.com/espnradio/feeds/rss/podcast.xml?id=9941853 sports
 http://espn.go.com/espnradio/feeds/rss/podcast.xml?id=12563086 sports
-https://packages.gentoo.org/packages/updated.atom
-https://packages.gentoo.org/packages/added.atom
 https://www.youtube.com/feeds/videos.xml?channel_id=UCuAfEOeiJpBj70bzlNiPcwQ youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkQFUWiaxg5GXl3cxDvkUng youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkefXKtInZ9PLsoGRtml2FQ youtube
