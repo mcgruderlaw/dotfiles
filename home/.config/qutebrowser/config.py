@@ -33,7 +33,7 @@ c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}",
                        "yt": "https://youtube.com/results?search_query={}"
                        }
 c.aliases = {"bar": "open https://blackagendareport.com",
-             "bb": "https://bitbucket.org",
+             "bb": "open https://bitbucket.org",
              "bl": "open http://thebiglead.com",
              "cr": "open http://www.cracked.com",
              "ds": "open https://deadspin.com",
