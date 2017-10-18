@@ -4,10 +4,9 @@ config.unbind('J', mode='normal')
 config.unbind('K', mode='normal')
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
-config.bind('q', 'quit')
 c.fonts.hints = "bold 12pt monospace"
-c.fonts.statusbar = "10 pt monospace"
-c.fonts.tabs = "10pt monospace"
+c.fonts.statusbar = "8pt monospace"
+c.fonts.tabs = "8pt monospace"
 c.messages.timeout = 7000
 c.hints.uppercase = True
 c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}",
