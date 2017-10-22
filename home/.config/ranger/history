@@ -1,2 +1,50 @@
-search Mom
+set show_hidden!
+search config
+search rang
+search 
+search 219
+shell zathura %s
+cd 
+rename Downloads
+1?
+search port
+find n
+find p
+find 
+search sh
+search doc
+search .config
+sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
+shell sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
+search 
+shell cp mpv-shot0002.jpg{,`date +%Y.%m./home/dmc.%H.%M./home/dmc/mpv-shot0002.jpg`}
+shell cp mpv-shot0002.jpg{,`date -I`}
+shell cp mpv-shot0002.jpg{,`date +/home/dmc/mpv-shot0002.jpg.%H.%M./home/dmc/mpv-shot0002.jpg`}
+shell cp mpv-shot0002.jpg{,`date +%Y.%m.%d.%H.%M./home/dmc/mpv-shot0002.jpg`}
+shell cp mpv-shot0002.jpg{,`date +%Y.%m.%d.%H.%M.%S`}
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +%Y.%m.%d.%H.%M.%S`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +X.+x`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +%X.%x`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +%Y`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +/home/dmc/mpv-shot0002.jpg`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +%x`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I[ns]`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I['date', 'hours', 'minutes', 'seconds']`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I 'date', 'hours', 'minutes', 'seconds'`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'date', 'hours', 'minutes', 'seconds'`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I='date', 'hours', 'minutes', 'seconds'`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -u`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date --utc`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I[date, hours, minutes, seconds]`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I['hours']`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'hours'`
+shell cp mpv-shot0002.jpg. mpv-shot0002.jpg..`date -I'hours', 'minutes', 'seconds'`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'hours' 'minutes' 'seconds'`
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'seconds'`
+delete
+cd .config
+search ranger
+shell cp mpv-shot0001.jpg mpv-shot0001.jpg.`date -I'seconds'`
+shell 
 open_with 
+echo Sourced
