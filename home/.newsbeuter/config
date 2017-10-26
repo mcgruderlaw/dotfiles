@@ -53,7 +53,11 @@ bind-key j down
 bind-key k up
 bind-key m toggle-show-read-feeds
 bind-key ^D pagedown
+#unbind-key ^B
+#bind-key ^B pageup
+bind-key ^F pagedown
 bind-key ^U pageup
+bind-key ^M bookmark
 bind-key / open-search tagselection
 
 
@@ -98,7 +102,8 @@ macro r set browser "tmux split-window && tmux send-keys 'rtv -l %u && tmux kill
 # add video or audio to play queue using mpv (requires: task-spooler, mpv, youtube-dl)
 # task-spooler: https://www.youtube.com/watch?v=wv8D8wT20ZY
 # youtube-dl: https://www.youtube.com/watch?v=MFxlwVhwayg
-macro p set browser "ts mpv --cache=yes --cache-secs=10 --cache-pause --cache-initial=10000 --ontop --no-border --force-window --autofit=1050x450 --geometry=-15-70 %u"; open-in-browser ; set browser "$BROWSER %u"
+#macro p set browser "ts mpv --cache=yes --cache-secs=10 --cache-pause --cache-initial=10000 --ontop --no-border --force-window --autofit=1050x450 --geometry=-15-70 %u"; open-in-browser ; set browser "$BROWSER %u"
+macro p set browser "ts mpv --ontop --no-border --force-window --autofit=1050x450 --geometry=-15-70 %u"; open-in-browser ; set browser "$BROWSER %u"
 
 # copy url to clipboard "yank"
 # xclip: https://www.youtube.com/watch?v=fKP0FLp3uW0
