@@ -1,12 +1,3 @@
-set show_hidden!
-search config
-search rang
-search 
-search 219
-shell zathura %s
-cd 
-rename Downloads
-1?
 search port
 find n
 find p
@@ -48,3 +39,12 @@ shell cp mpv-shot0001.jpg mpv-shot0001.jpg.`date -I'seconds'`
 shell 
 open_with 
 echo Sourced
+touch tc.txt
+mkdir dunaway,mack
+touch will.txt
+rename
+rename will.docx
+mkdir will
+
+rename will.tex
+open_with libreoffice
