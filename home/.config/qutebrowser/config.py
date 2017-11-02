@@ -1,5 +1,6 @@
 c.tabs.position = "top"
-c.url.start_pages = ["about:blank"]
+c.url.start_pages = "about:blank"
+c.url.default_page = "about:blank"
 config.unbind('J', mode='normal')
 config.unbind('K', mode='normal')
 config.bind('J', 'tab-prev')
@@ -10,6 +11,7 @@ c.fonts.statusbar = "8pt monospace"
 c.fonts.tabs = "8pt monospace"
 c.messages.timeout = 7000
 c.hints.uppercase = True
+c.content.pdfjs = True
 c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}",
                        "4": "https://4chan.org/{}",
                        "4cat": "https://4chan.org/{}/catalog",
