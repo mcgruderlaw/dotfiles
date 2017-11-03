@@ -7,8 +7,8 @@ config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('Y', 'hint links spawn mpv {hint-url}')
 c.fonts.hints = "bold 12pt monospace"
-c.fonts.statusbar = "8pt monospace"
-c.fonts.tabs = "8pt monospace"
+c.fonts.statusbar = "10pt monospace"
+c.fonts.tabs = "10pt monospace"
 c.messages.timeout = 7000
 c.hints.uppercase = True
 c.content.pdfjs = True
@@ -48,3 +48,4 @@ c.aliases = {"bar": "open https://blackagendareport.com",
              "rm": "open https://rm5.rocketmatter.net/mcgruderlaw/app.aspx#/dashboard",
              "ro": "open https://www.theroot.com"
              }
+c.zoom.default = 150
