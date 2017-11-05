@@ -1,0 +1,23 @@
+# solarized color scheme for newsbeuter <http://www.newsbeuter.org/>
+# more on solarized: http://ethanschoonover.com/solarized
+
+color background   color12 color8
+color listnormal   color12 color8
+color listfocus    color8  color3
+color listnormal_unread   color12 color0
+color listfocus_unread    color8  color3
+
+color info         white color0
+color article      color12 color8
+
+datetime-format "%d %b %Y, %H:%M"
+articlelist-format "%4i %f %D  —  %?T?|%-17T| ?“%t”"
+
+highlight article     "(^Fil:|^Titre:|^Lien:|^Date:|^Auteur:)" color3   default
+highlight article     "^URL de [^:]*:"                         color3   default
+highlight article     "^Liens:"                                color4   default
+highlight article     "\\[[0-9][0-9]*\\]:?"                    color12  black
+highlight article     "\\[image [0-9][0-9]*\\]:?"              color12  black
+highlight article     "\\(lien\\)$"                            green    default
+highlight article     "\\(image\\)$"                           red      default
+
