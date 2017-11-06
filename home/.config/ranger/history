@@ -1,3 +1,7 @@
+find n
+find p
+find 
+search sh
 search doc
 search .config
 sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
@@ -31,7 +35,6 @@ cd .config
 search ranger
 shell cp mpv-shot0001.jpg mpv-shot0001.jpg.`date -I'seconds'`
 shell 
-open_with 
 echo Sourced
 touch tc.txt
 mkdir dunaway,mack
@@ -42,9 +45,5 @@ mkdir will
 
 rename will.tex
 open_with libreoffice
-mkdir shaw,charles
-search sh
-shell sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
-mkdir deviation
-search shaw
-search mutt
+open_with vim
+open_with 
