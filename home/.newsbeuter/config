@@ -9,22 +9,22 @@ reload-time 30
 #refresh-on-startup no
 # reload-only-visible-feeds yes
 user-agent "Liferea/1.4.14 (Linux; en_US.UTF8; http://liferea.sf.net/)"
-article-sort-order  date-desc
+article-sort-order  date-asc
 confirm-exit yes
 browser $BROWSER
+datetime-format "%d %B %Y %R"
 #download-full-page yes		# for feeds with link only then dl full page
 download-retries 4
 download-timeout 60
 save-path ~/Documents/notes/Newsbeuter
 feedlist-format " %n %4i %11u %t -- %T"
-#articlelist-format  "%4i %f %D   %?T?|%-17T|  ?%t"
+articlelist-format  "%4i %f %D   %?T?|%-17T|  ?%t"
 #notify-format       "%d new articles (%n unread articles, %f unread feeds)"
 show-read-feeds no
 show-read-articles no
 #notify-program      "/usr/bin/notify-send"
 #goto-next-feed no
 #max-items 500
-#refresh-on-startup no
 text-width 60
 #prepopulate-query-feeds yes
 #}}}
@@ -97,7 +97,7 @@ macro o set browser "tmux split-window && tmux send-keys '$BROWSERCLI %u && tmux
 # read reddit comments with rtv (reddit terminal viewer)
 # rtv: https://www.youtube.com/watch?v=jc2ZVSof5-g
 # macro r set browser "rtv -l %u"; open-in-browser ; set browser "$BROWSER %u"
-macro r set browser "tmux split-window && tmux send-keys 'rtv -l %u && tmux kill-pane\n'"; open-in-browser ; set browser "$BROWSER %u"
+macro r set browser "tmux split-window && tmux send-keys '/home/dmc/.virtualenv/rtv/bin/rtv -l %u && tmux kill-pane\n'"; open-in-browser ; set browser "$BROWSER %u"
 
 # add video or audio to play queue using mpv (requires: task-spooler, mpv, youtube-dl)
 # task-spooler: https://www.youtube.com/watch?v=wv8D8wT20ZY
@@ -138,16 +138,20 @@ macro s set browser "tmux split-window && tmux send-keys 'ranger ~/.newsbeuter/s
 
 
 # Theme from MaskRay on github {{{1
-color listnormal color244 default
-color listnormal_unread color248 default
-color listfocus white color235
-color listfocus_unread white color235
-color article color248 default
-color info green default
+#color listnormal color244 default
+#color listnormal_unread color248 default
+#color listfocus white color235
+#color listfocus_unread white color235
+#color article color248 default
+#color info green default
+#
+#highlight article "^Feed: .*$" color3 default
+#highlight article "^Title: .*$" color13 default bold
+#highlight article "^Author: .*$" color5 default
+#highlight article "^Link: .*$" color6 default
+#highlight article "^Date: .*$" color4 default
 
-highlight article "^Feed: .*$" color3 default
-highlight article "^Title: .*$" color13 default bold
-highlight article "^Author: .*$" color5 default
-highlight article "^Link: .*$" color6 default
-highlight article "^Date: .*$" color4 default
-
+#include "~/.newsbeuter/colorschemes/jrhorn424"
+include "~/.newsbeuter/colorschemes/maskray"
+#include "~/.newsbeuter/colorschemes/solarized-dark"
+#include "~/.newsbeuter/colorschemes/solarized-light"
