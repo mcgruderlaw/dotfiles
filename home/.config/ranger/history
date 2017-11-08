@@ -5,7 +5,6 @@ search sh
 search doc
 search .config
 sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
-shell sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
 search 
 shell cp mpv-shot0002.jpg{,`date +%Y.%m./home/dmc.%H.%M./home/dmc/mpv-shot0002.jpg`}
 shell cp mpv-shot0002.jpg{,`date -I`}
