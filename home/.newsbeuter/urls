@@ -1,6 +1,7 @@
 http://feeds.feedburner.com/zenhabits spirit
 https://blackagendareport.com/feeds  commentary news "~Black Agenda Report"
-#http://feeds.dailykos.com/dailykos/index.xml news
+https://www.theroot.com/rss commentary news
+https://splinternews.com/rss commentary news
 https://www.dailykos.com/user/main/rss.xml news
 http://www.aljazeera.com/Services/Rss/?PostingId=2007731105943979989 news
 https://www.archlinux.org/feeds/news/ programming
@@ -18,9 +19,14 @@ http://feeds.findlaw.com/FindLawIndSup law
 http://feeds.findlaw.com/USSixthCircuit law
 http://feeds.findlaw.com/USSeventhCircuit law
 http://feeds.feedburner.com/litigationps/NACO?format=xml law
+https://deadspin.com/rss sports
+http://www.racer.com/f1?format=feed&type=rss sports
+http://www.racer.com/indycar?format=feed&type=rss sports
 http://espn.go.com/espnradio/feeds/rss/podcast.xml?id=6962629 sports
 http://espn.go.com/espnradio/feeds/rss/podcast.xml?id=9941853 sports
 http://espn.go.com/espnradio/feeds/rss/podcast.xml?id=12563086 sports
+https://jalopnik.com/rss misc cars autos
+https://lifehacker.com/rss misc commentary
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCkQFUWiaxg5GXl3cxDvkUng youtube
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCkefXKtInZ9PLsoGRtml2FQ youtube
 #https://www.youtube.com/feeds/videos.xml?channel_id=UC4c63M9ffzVOpboyzqdCeTA youtube
