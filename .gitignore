@@ -27,3 +27,4 @@
 *.swo
 *.git
 .vim/bundle/*
+home/.config/ranger/history
