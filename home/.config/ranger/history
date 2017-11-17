@@ -1,10 +1,8 @@
-find n
-find p
-find 
 search sh
 search doc
 search .config
 sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
+shell sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
 search 
 shell cp mpv-shot0002.jpg{,`date +%Y.%m./home/dmc.%H.%M./home/dmc/mpv-shot0002.jpg`}
 shell cp mpv-shot0002.jpg{,`date -I`}
@@ -33,7 +31,6 @@ shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'seconds'`
 delete
 cd .config
 search ranger
-shell cp mpv-shot0001.jpg mpv-shot0001.jpg.`date -I'seconds'`
 shell 
 echo Sourced
 touch tc.txt
@@ -46,4 +43,8 @@ mkdir will
 rename will.tex
 open_with libreoffice
 open_with vim
+shell cp maskray maskray.`date -I'seconds'`
+search mailcap
 open_with 
+search rc.conf
+shell cp mpv-shot0001.jpg mpv-shot0001.jpg.`date -I'seconds'`
