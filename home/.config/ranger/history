@@ -1,36 +1,15 @@
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +X.+x`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +%X.%x`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +%Y`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +/home/dmc/mpv-shot0002.jpg`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +%x`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I[ns]`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I['date', 'hours', 'minutes', 'seconds']`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I 'date', 'hours', 'minutes', 'seconds'`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'date', 'hours', 'minutes', 'seconds'`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I='date', 'hours', 'minutes', 'seconds'`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -u`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date --utc`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I[date, hours, minutes, seconds]`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I['hours']`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'hours'`
-shell cp mpv-shot0002.jpg. mpv-shot0002.jpg..`date -I'hours', 'minutes', 'seconds'`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'hours' 'minutes' 'seconds'`
-shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date -I'seconds'`
-delete
-cd .config
-search ranger
-shell cp mpv-shot0001.jpg mpv-shot0001.jpg.`date -I'seconds'`
-shell 
-echo Sourced
-touch tc.txt
-mkdir dunaway,mack
-touch will.txt
-rename
-rename will.docx
-mkdir will
-rename will.tex
-open_with libreoffice
-mkdir shaw,charles
+search sh
+search doc
+search .config
+sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
+shell sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
+search 
+shell cp mpv-shot0002.jpg{,`date +%Y.%m./home/dmc.%H.%M./home/dmc/mpv-shot0002.jpg`}
+shell cp mpv-shot0002.jpg{,`date -I`}
+shell cp mpv-shot0002.jpg{,`date +/home/dmc/mpv-shot0002.jpg.%H.%M./home/dmc/mpv-shot0002.jpg`}
+shell cp mpv-shot0002.jpg{,`date +%Y.%m.%d.%H.%M./home/dmc/mpv-shot0002.jpg`}
+shell cp mpv-shot0002.jpg{,`date +%Y.%m.%d.%H.%M.%S`}
+shell cp mpv-shot0002.jpg mpv-shot0002.jpg.`date +%Y.%m.%d.%H.%M.%S`
 search sh
 shell sshfs dmc@192.168.2.2:/data/Media /home/dmc/Downloads/tmp/ -p 39966
 mkdir deviation
@@ -42,9 +21,3 @@ mkdir archerllc
 rename ein_letter.pdf
 rename articles.pdf
 rename articles_endorsed.pdf
-
-mkdir ajdinovic-mirsad
-
-a
-search turn
-search myp
