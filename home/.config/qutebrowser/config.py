@@ -48,4 +48,4 @@ c.aliases = {"bar": "open https://blackagendareport.com",
              "rm": "open https://rm5.rocketmatter.net/mcgruderlaw/app.aspx#/dashboard",
              "ro": "open https://www.theroot.com"
              }
-c.zoom.default = 150
+c.zoom.default = 110
