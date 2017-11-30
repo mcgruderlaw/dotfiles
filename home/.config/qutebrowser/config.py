@@ -11,7 +11,7 @@ c.fonts.statusbar = "10pt monospace"
 c.fonts.tabs = "10pt monospace"
 c.messages.timeout = 7000
 c.hints.uppercase = True
-c.content.pdfjs = True
+#c.content.pdfjs = True
 c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}",
                        "4": "https://4chan.org/{}",
                        "4cat": "https://4chan.org/{}/catalog",
@@ -49,3 +49,4 @@ c.aliases = {"bar": "open https://blackagendareport.com",
              "ro": "open https://www.theroot.com"
              }
 c.zoom.default = 110
+c.colors.webpage.bg = '#000000'
