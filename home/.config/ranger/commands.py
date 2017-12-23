@@ -13,7 +13,7 @@ from ranger.api.commands import *
 # You can import any python module as needed.
 import os
 # Git Annex Imports
-#import ranger.api
+import ranger.api
 #import ranger.api.commands
 
 import subprocess
