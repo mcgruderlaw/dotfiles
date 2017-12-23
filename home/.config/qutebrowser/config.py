@@ -6,7 +6,7 @@ config.unbind('K', mode='normal')
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('Y', 'hint links spawn mpv {hint-url}')
-c.fonts.hints = "bold 8pt monospace"
+c.fonts.hints = "bold 10pt monospace"
 c.fonts.statusbar = "8pt monospace"
 c.fonts.tabs = "8pt monospace"
 c.messages.timeout = 7000
