@@ -1,0 +1,3 @@
+[submodule "home/.config/ranger/plugins/ranger-annex"]
+	path = home/.config/ranger/plugins/ranger-annex
+	url = git@github.com:matze/ranger-annex.git
