@@ -28,3 +28,4 @@
 *.git
 .vim/bundle/*
 home/.config/ranger/history
+home/.config/mpv/watch_later/*
