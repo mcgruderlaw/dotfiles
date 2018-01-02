@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# AUTHOR: David E. McGruder
+#
+# DATE: December 31, 2017
+#
+# DESC: Elvi to search ICLE
+# elvis: icle		-- Search ICLE (www.icle.org)
+. surfraw || exit 1
+
+w3_usage_hook () {
+    cat <<EOF
+Usage: $w3_argv0 [options] [search words]...
+Description:
+  Search ICLE (www.icle.org)
+EOF
+    w3_global_usage
+}
+
+w3_config
+w3_parse_args "$@"
+if test -z "$w3_args"; then
+    w3_browse_url "http://www.icle.org/"
+else
+    escaped_args=`w3_url_of_arg $w3_args`
+    w3_browse_url "http://www.icle.org/modules/search/search.aspx"
+fi
