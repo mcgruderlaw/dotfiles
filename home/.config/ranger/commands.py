@@ -7,8 +7,7 @@
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import *
 
-# A simple command for demonstration purposes follows.
-# -----------------------------------------------------------------------------
+# A simple command for demonstration purposes follows.  # -----------------------------------------------------------------------------
 
 # You can import any python module as needed.
 import os
